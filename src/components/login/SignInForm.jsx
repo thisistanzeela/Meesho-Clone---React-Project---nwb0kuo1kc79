@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-
 import "../login/Profile.css";
+import { useLocalStorage } from '../useLocalStorage';
 
 export default function SignInForm(props) {
- 
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");

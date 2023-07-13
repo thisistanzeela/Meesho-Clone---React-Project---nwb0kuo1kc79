@@ -1,11 +1,8 @@
 import React, { useState } from 'react'
 import '../login/Profile.css'
-
+import { useLocalStorage } from '../useLocalStorage';
 
 export default function Profile(props) {
- 
-
-
   const LoginCondition=()=>{
     props.stateCallBack();
   }

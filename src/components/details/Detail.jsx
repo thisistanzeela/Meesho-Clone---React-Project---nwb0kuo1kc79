@@ -2,54 +2,30 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Detail.css";
 import { CiStar } from "react-icons/ci";
+import { BsCart2 } from "react-icons/bs";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
 function Detail() {
-  
-  let data;
-  if (sessionStorage.getItem("Detail") === null) {
-    console.log("No Data Availble");
-    data = null;
-  } else {
-    data = JSON.parse(sessionStorage.getItem("Detail"));
-    console.log(data);
-  }
+  const data = JSON.parse(localStorage.getItem("Detail"));
 
-  const AddtoCart = () => {
-    let cartObject = {
-      data,
-      count: 1,
-    };
-    const cartData = sessionStorage.getItem("cart");
-    let cartArr;
-    if (cartData === null) {
-      cartArr = [];
-      cartArr.push(cartObject);
+  const addToCart = () => {
+    const cartData = JSON.parse(localStorage.getItem("cart")) || [];
+    const existingItem = cartData.find((item) => item.data.id === data.id);
+
+    if (existingItem) {
+      existingItem.count += 1;
     } else {
-      cartArr = JSON.parse(cartData);
-      let tempCount;
-      let indexOfCart;
-      if (
-        cartArr.some((item, index) => {
-          if (item.data.id === data.id) {
-            tempCount = item.count;
-            indexOfCart=index
-            return true;
-          }
-          return false;
-        })
-      ) {
-        console.log("duplicate");
-        cartArr.splice(indexOfCart,1);
-        cartArr.push({
-          ...cartObject,
-          count: tempCount + 1,
-        });
-        console.log(cartArr);
-      } else {
-        cartArr.push(cartObject);
-      }
+      cartData.push({
+        data,
+        count: 1,
+      });
     }
-    sessionStorage.setItem("cart", JSON.stringify(cartArr));
+
+    localStorage.setItem("cart", JSON.stringify(cartData));
+  };
+
+  const getDeliveryText = (isEven) => {
+    return isEven ? "Delivery ₹62": "Free Delivery" ;
   };
 
   return (
@@ -58,24 +34,36 @@ function Detail() {
         ""
       ) : (
         <div className="detail">
-          <div className="img">
-            <img src={data.image} alt={data.title} />
-            <p>
-              {data.rating.rate}
-              <CiStar />
-            </p>
-            <button onClick={AddtoCart}>Add To Cart</button>
+          <div className="img-div">
+            <div className="img">
+              <img src={data.image} alt={data.title} />
+            </div>
+            <div className="btn">
+              <button onClick={addToCart} className="addToCart-button">
+                <BsCart2 className="cart-logo" /> Add To Cart
+              </button>
+              <button className="buyNow-button">
+                <MdKeyboardDoubleArrowRight className="arrow-logo" /> Buy Now
+              </button>
+            </div>
           </div>
           <div className="list">
-            {" "}
             <div className="titlePrice">
               <p id="title">{data.title}</p>
-              <p className="price"> $ {data.price}</p>
-            </div>{" "}
+              <p className="price"> ₹ {data.price}</p>
+              <p className="ratingg">
+                {data.rating.rate}
+                <CiStar />
+              </p>
+              <div className="delivery-div">
+                <span>{getDeliveryText(data.id % 2 === 0)}</span>
+              </div>
+            </div>
             <div className="des">
-              <h3>Discription</h3>
+              <h3>Description</h3>
               <p>{data.description}</p>
             </div>
+            
           </div>
         </div>
       )}

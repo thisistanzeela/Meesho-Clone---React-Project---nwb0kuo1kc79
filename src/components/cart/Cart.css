@@ -1,12 +1,15 @@
+.cartt{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
 .cart-detail{
-    width: 45vw;
-    height: 14rem;
-    background-color: white;
+    width: 50vw;
+    height: 20vw;
     padding-left: 2rem;
-    padding-top: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 6px;
-    box-shadow: 0 0 8px 4px;
+    margin-bottom: 4rem;
+    border: 1px solid grey;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,27 +35,28 @@
     position: relative;
     right: -4rem;
     bottom: 1rem;
-    font-weight: bolder;
+    font-weight: bold;
     font-size: larger;
     width: 14rem;
 }
 
 .cart-data h4{
     position: relative;
-    right: 8rem;
-    top: 4rem;
-    background-color: deeppink;
-    width: 71px;
-    height: 35px;
+    left: 18rem;
+    padding: 14px 40px;
     text-align: center;
-    border-radius: 12px;
-    box-shadow: 0 0 8px 4px;
+    border: 1px solid rgba(114, 112, 112, 0.549);
 }
-
-.haldle{
+.equalSign{
+    font-size: 30px;
+    color: black;
+    padding: 0px 10px;
+}
+.handle{
     position: relative;
-    width: 10rem;
-    box-shadow: 0 0 8px 4px;
+    width: 8rem;
+    border: 1px solid rgba(114, 112, 112, 0.549);
+    /* box-shadow: 0 0 4px 0px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,19 +65,22 @@
 
 .buynow{
     position: relative;
-    right: 7rem;
+    right: 110px;
     top: 70px;
-    background-color: royalblue;
+    background-color:rgb(159, 32, 137) ;
     border-radius: 10px;
-    box-shadow: 0 0 8px 4px;
+    height: 50px;
+    width: 150px;
+    box-shadow: 0 0 2px 0px;
+    border: none;
 }
 
-.haldle button{
-    width: 2rem;
-    height: 2rem;
+.handle button{
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
-.haldle h2{
+.handle h2{
     position: relative;
     bottom: 1px;
     margin: 1rem;
@@ -86,4 +93,35 @@
     width: 21rem;
     position: relative;
     left: 5rem;
+}
+.no-item-msg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin-top: 0px;
+    /* margin-bottom: 90px; */
+}
+.no-item-msg p{
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.777);
+}
+.no-item-msg > div{
+    cursor: pointer;
+    font-style: normal;
+    text-align: center;
+    letter-spacing: 0.0015em;
+    /* font-size: 17px; */
+    font-weight: bold;
+    line-height: 20px;
+    border-radius: 4px;
+    /* color: rgb(159, 32, 137); */
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(159, 32, 137);
+    padding: 8px 12px;
+}
+.no-item-msg .link{
+    color: rgb(159, 32, 137);
 }

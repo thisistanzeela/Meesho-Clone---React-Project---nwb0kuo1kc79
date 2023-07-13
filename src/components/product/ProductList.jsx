@@ -1,49 +1,55 @@
 import React from "react";
 import "./Product.css";
-import { CiStar } from "react-icons/ci";
-import { json, NavLink } from "react-router-dom";
+import { AiFillStar } from "react-icons/ai";
+import { NavLink } from "react-router-dom";
 
 export function ProductList(props) {
   const detailFunction = (arg) => {
-    sessionStorage.setItem("Detail", JSON.stringify(arg));
+    localStorage.setItem("Detail", JSON.stringify(arg));
   };
-  console.log(props.productDetail);
+
   const listOfProduct = (arr) => {
     return arr.map((item, index) => {
+      const isEven = index % 2 === 0;
+      const deliveryText = isEven ? "Free Delivery" : "Delivery ₹62";
+
       return (
-        <NavLink to="/detail">
-          <div
+        <NavLink to="/detail" key={index}>
+          <div 
             onClick={() => {
               detailFunction(item);
             }}
-            key={"div" + index}
             className="product-card"
           >
-            <img src={item.image} key={"img" + index} alt={item.title} />
-
-            <p className="title" key={"p" + index}>
-              {item.title}
-            </p>
-            <p className="rupee" key={"price" + index}>
-              <span>$</span> {item.price}
-            </p>
-            <div className="rating">
-              <p className="rating-p" key={"rating" + index}>
-                {item.rating.rate}
-                <CiStar />
-              </p>
+            
+            <img src={item.image} alt={item.title} />
+              <p className="title">{item.title}</p>
+              <div className="price-delivery-rating">
+                <div className="rate">
+                  <p>
+                    <span>₹</span> {item.price}
+                    <span> onwards</span>
+                  </p>
+                </div>
+                <div className="delivery">
+                  <span>{deliveryText}</span>
+                </div>
+                <div className="rating">
+                  <p className="rating-p">
+                    {item.rating.rate}
+                    <AiFillStar />
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
         </NavLink>
       );
     });
   };
 
   return (
-    <>
-      <div className="product-section">
-        {props.productDetail === null ? "" : listOfProduct(props.productDetail)}
-      </div>
-    </>
+    <div className="product-section">
+      {props.productDetail === null ? "" : listOfProduct(props.productDetail)}
+    </div>
   );
 }

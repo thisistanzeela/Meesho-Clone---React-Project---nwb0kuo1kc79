@@ -1,0 +1,344 @@
+.main{
+    margin: 0px ;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.col-1{
+    margin: 0px auto;
+    margin-right: 0px;
+    background-color:rgb(248, 248, 255);
+}
+h1{
+    font-size: 40px;
+    color: rgba(0, 0, 0, 0.852);
+    padding: 0px 40px;
+}
+.underline::after{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    height: 0.7rem;
+    width: 86%;
+    background-color: rgba(242, 187, 233, 0.384);
+    left: -3%;
+    bottom: 1%;
+    z-index: -1;
+    border-radius: 8px
+}
+h1 span{
+    position: relative;
+}
+.hero-img{
+    width: 76%;
+    height: 100%;
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color:rgb(255, 255, 255) ;
+    margin: 30px 60px 30px 40px ;
+    padding: 0px 0px 0px 20px;
+}
+
+.flex span{
+    color: rgb(53, 53, 67);
+    font-weight: bold;
+    font-size: 16px;
+    padding-top: 10px;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.divide{
+    background-color: rgb(28, 30, 28);
+    height: 50px;
+    width: 1px;
+    margin: 10px;
+}
+.downloadBtn{
+    padding: 12px 32px;
+    background-color: rgb(159, 32, 137);
+    display: inline;
+    margin-left:  40px;
+    border-radius: 4px;
+    color: #fbf3f3;
+    /* font-weight: bold; */
+    font-size: 18px;
+}
+.downloadBtn img{
+    position: relative;
+    top: 8px;
+    margin-right: 20px;
+}
+
+/* next section */
+
+.topCategory{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.topCategory span{
+    color: rgb(53, 53, 67);
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 44px;
+    text-align: center;
+}
+.line{
+    width: 16%;
+    height: 1px;
+    background: rgb(217, 166, 208);
+    margin: 0px 20px;
+}
+
+/* next section */
+.sectionThree,.sectionFour,.sectionFive,.sectionSix{
+    height: 80vh;
+    margin-top: 0px;
+}
+.backgroundImg{
+    background-image: url("https://images.meesho.com/images/marketing/1678691670429_1200.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;  
+    height: 80vh;
+    margin-top: 24px; 
+}
+.flex-container{
+    display: flex;
+    align-items: end;
+}
+.flexOne{
+    position: relative;
+}
+.flexOne img{
+    position: absolute;
+    top: 110px;
+    left: 258px;
+}
+.flexTwo,.col1,.col2,.col3,.col4{
+    position: relative;
+}
+.flexTwo img:nth-child(1){
+    position: absolute;
+    left: 648px;
+    top: 210px;
+}
+.flexTwo img:nth-child(2){
+    position: absolute;
+    left: 960px;
+    top: 220px;
+}
+
+/* next section */
+.backgroundImg2{
+    background-image: url("https://images.meesho.com/images/marketing/1678691743015_1200.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;  
+    height: 80vh;
+    margin-top: 24px; 
+    border-radius: 4px;
+}
+.col1 img{
+    position: absolute;
+    left: 310px;
+    top: 180px;
+    width: 200px;
+}
+
+.col2 img{
+    position: absolute;
+    left: 620px;
+    top: 110px;
+    height: 330px;
+    width: 200px;
+}
+.col2 img:nth-child(2){
+    position: absolute;
+    left: 634px;
+    top: 440px;
+    width: 176px;
+    height: 60px;
+}
+.col3 img{
+    position: absolute;
+    left: 830px;
+    top: 10px;
+    height: 330px;
+    width: 200px;
+}
+.col3 img:nth-child(2){
+    position: absolute;
+    left: 850px;
+    top: 338px;
+    width: 160px;
+    height: 60px;
+}
+.col4 img{
+    position: absolute;
+    left: 1040px;
+    top: 10px;
+    width: 200px;
+    height: 330px;
+}
+.col4 img:nth-child(2){
+    position: absolute;
+    left: 1046px;
+    top: 338px;
+    width: 190px;
+    height: 60px;
+}
+/* next section-4 */
+.backgroungImg3{
+    background-image: url("https://images.meesho.com/images/marketing/1678691892265_1200.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;  
+    height: 80vh;
+    margin-top: 24px; 
+    border-radius: 4px;
+}
+/* next section-4 */
+.backgroundImg4{
+    background-image: url("https://images.meesho.com/images/pow/downloadBannerDesktop_1050.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 72vw;
+    height: 80vh;
+
+    margin: 24px 0px 0px 216px;
+    border-radius: 4px;
+    
+}
+/* next section-5 */
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.flexColumn p{
+    color: rgb(85, 133, 248);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    margin: 50px 50px 16px;
+    padding: 0px;
+}
+.flexColumn h2:nth-child(1){
+    color: rgb(159, 32, 137);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 56px;
+    margin: 0px 50px 0px 0px;
+    padding: 0px;
+}
+.flexColumn h2:nth-child(2){
+    color: rgb(159, 32, 137);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 56px;
+    margin: 0px 0px 0px 130px;
+    padding: 0px;
+}
+.playStoreBtn {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+}
+.playStoreBtn img{
+    width: 200px;
+    height: 40px;
+}
+.playStoreBtn .btn1:nth-child(1){
+    margin: 50px 0px 0px 0px;
+}
+.playStoreBtn .btn2:nth-child(2){
+    margin: 50px 50px 0px 0px;
+}
+
+/* next section  */
+.sectionSeven{
+    width: 100%;
+    height: 60vh;
+    margin-top: 58px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.supplierImg{
+    width: 72vw;
+    height: auto;
+    margin: 10px 0px 0px 216px;
+    border-radius: 4px;
+}
+.content{
+    position: absolute;
+    left: 210px;
+    width: 100%;
+    height: 100%;
+    padding: 40px 60px;
+    color: rgb(255, 255, 255);
+}
+.content .title {
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 40px;
+    margin:0px 0px 0px 6px ;
+}
+.content .sub-title {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    margin: 16px 0px 0px 6px;
+}
+.content .text{
+    display: flex;
+    margin: 14px 0px 20px 8px;
+}
+.SupplierBanner1, .SupplierBanner2,.SupplierBanner3{
+    display: flex;
+    align-items: center;
+}
+.SupplierBanner1{
+    margin-right: 30px;
+}
+.SupplierBanner2{
+    margin: 0px 30px 0px 30px;
+}
+.SupplierBanner3{
+    margin-left: 30px;
+}
+.text .icon {
+    margin-right: 8px;
+}
+.divide{
+    margin-top: 16px;
+    width: 1px;
+    height: 20px;
+    background-color: rgb(255, 255, 255);
+}
+.jmVeNL {
+    width: 110px;
+    background: rgb(255, 255, 255);
+    color: rgb(159, 32, 137);
+    border-radius: 4px;
+    padding: 12px 24px;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 8px;
+    position: absolute;
+}

@@ -2,102 +2,113 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 80vh;
+}
+.img-div,.list{
+    height: 120%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .img{
-    width: 365px;
-    height: 359px;
-    background-color: white;
-    border-radius: 9px;
-    position: relative;
-    box-shadow: 0 0 4px 8px #cdb9b9;
-    bottom: 8px;
-    left: -46px;
-    display: grid;
-    grid-template-rows: 1fr;
+    border: 1px solid rgb(176, 174, 174);
+    width: 80%;
+    height: 60%;
+    
 }
 .img img{
-    position: relative;
-    left: 93px;
-    top: 20px;
-    width: 150px;
+    width: 70%;
+    height:90%;
+    margin-left: 50px;
 }
 
-.img button{
-    position: relative;
-    top: -37px;
-    left: 118px;
-    width: 82px;
+.btn{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding:10px 30px;
+}
+
+.addToCart-button{
+    font-weight: bold;
+    font-size: 16px;
+    border: 1px solid rgb(159, 32, 137);
+    padding:10px 30px;
+    border-radius: 6px ;
+    color: rgb(159, 32, 137);
+    background-color: transparent;
+}
+.buyNow-button{
+    font-weight: bold;
+    font-size: 16px;
+    background-color: rgb(159, 32, 137);
+    color: white;
+    border: none;
+    border-radius: 6px ;
+    padding:10px 30px
+
+
+}
+.cart-logo{
+    color: rgb(159, 32, 137) !important;
+}
+.arrow-logo{
+    padding: 0px;
+    margin-top: 6px;
+    font-size: 18px !important;
 }
 
 .titlePrice{
-    text-align: center;
-    width: 365px;
-    height: 138px;
-    background-color: white;
-    border-radius: 9px;
-    position: relative;
-    box-shadow: 0 0 4px 8px #cdb9b9;
-    bottom: 0px;
-    left: 45px;
-    display: grid;
-    grid-template-rows: 1fr;
+    border: 1px solid rgb(176, 174, 174);
+    width: 80%;
+    padding: 20px;
+} 
+.title{
+    color: rgb(139, 139, 163);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0px;
+    padding: 0px;
 }
-#title{
-    width: 250px;
-    height: 30px;
-    position: relative;
-    left: 40px;
-}
-
 .price{
-    font-size: larger;
-    font-weight: bolder;
-    background-color: rgb(234, 92, 116);
-    margin: 0;
-    width: 82px;
-    height: 24px;
-    text-align: center;
-    position: relative;
-    bottom: 13px;
-    left: 131px;
-    border-radius: 8px;
-    border: 2px solid black;
+    color: rgb(53, 53, 67);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    margin: 0px;
+    padding: 0px;
 }
-
+.list .titlePrice .ratingg{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    padding: 4px 8px;
+    background: rgb(35, 187, 117);
+    color: rgb(255, 255, 255);
+}
+.delivery-div{
+    color: rgb(97, 97, 115);
+    font-style: normal;
+    font-size: 12px;
+    text-align: center;
+    margin-right: 280px;
+    padding: 0px;
+} 
 
 .des{
-    text-align: center;
-    width: 365px;
-    height: 238px;
-    background-color: white;
-    border-radius: 9px;
-    position: relative;
-    box-shadow: 0 0 4px 8px #cdb9b9;
-    bottom: -42px;
-    left: 45px;
-    display: grid;
-    grid-template-rows: 1fr;
-    
+    border: 1px solid rgb(176, 174, 174);
+    padding: 20px;
+    margin: 10px 24px;
 }
 .des h3{
-    position: relative;
-    top: 14px;
+    color: rgb(14, 14, 15)
 }
-
 .des p{
-    width: 364px;
-    height: 160px;
-    position: relative;
-    bottom: 3px;
-
-}
-
-.img p{
-    width: 49px;
-    background-color: green;
-    position: relative;
-    left: 14px;
-    border-radius: 3px;
-    text-align: center;
-
+    color: rgb(97, 97, 115);
+    font-size: 14px;
 }

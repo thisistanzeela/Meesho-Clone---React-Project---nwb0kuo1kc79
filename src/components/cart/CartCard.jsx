@@ -1,98 +1,66 @@
-import React, {  useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import "./Cart.css"
-
-
+import './Cart.css';
 
 function CartCard(props) {
-  let storageDetils= JSON.parse (sessionStorage.getItem("cart"));
+  const storageDetails = JSON.parse(localStorage.getItem('cart'));
+  const [addcart, setAddcart] = useState(null);
 
-    const [addcart, setAddcart]= useState(null);
+  useEffect(() => {
+    setAddcart(props.cartItem);
+  }, [props.cartItem]);
 
-    useEffect(()=>{
-      setAddcart(props.cartItem)
-    },[])
+  const increment = (arg) => {
+    const updatedCart = storageDetails.map((item) => {
+      if (item.data.id === arg.data.id) {
+        return { ...item, count: item.count + 1 };
+      }
+      return item;
+    });
 
+    localStorage.setItem('cart', JSON.stringify(updatedCart));
+    setAddcart(updatedCart.find((item) => item.data.id === arg.data.id));
+  };
 
-
-   const increment = (arg) => {
-    let tempCount;
-    let tempIndex;
-    if(storageDetils.some((item,index) => {
-        if(item.item === arg.item){
-            tempCount = item.count;
-            tempIndex = index;
-            return true
-        } else {
-            return false
+  const decrement = (arg) => {
+    const updatedCart = storageDetails.map((item) => {
+      if (item.data.id === arg.data.id) {
+        const updatedCount = item.count - 1;
+        if (updatedCount === 0) {
+          return null; // Remove item from cart
         }
-    })) {
-        storageDetils[tempIndex].count = tempCount + 1;
-        sessionStorage.setItem('cart',JSON.stringify(storageDetils));
-        setAddcart(storageDetils[tempIndex]);
-    } else {
-        console.log('no data')
-    }
-    console.log(arg)
-}
- 
-const decrement = (arg) => {
-  let tempCount;
-  let tempIndex;
-  if(storageDetils.some((item,index) => {
-      if(item.item === arg.item){
-          tempCount = item.count;
-          tempIndex = index;
-          return true
-      } else {
-          return false
+        return { ...item, count: updatedCount };
       }
-  })) {
-      storageDetils[tempIndex].count = tempCount - 1;
-      if(tempCount===1){
-        storageDetils.splice(tempIndex,1)
-      }
-    
-      console.log(storageDetils)
-      sessionStorage.setItem('cart',JSON.stringify(storageDetils));
+      return item;
+    }).filter(Boolean);
 
-      setAddcart(storageDetils[tempIndex]);
-  } else {
-      console.log('no data')
-  }
-  console.log(arg)
-}
+    localStorage.setItem('cart', JSON.stringify(updatedCart));
+    setAddcart(updatedCart.find((item) => item.data.id === arg.data.id));
+  };
 
-
-
-     
   return (
-    <div>
-    { addcart===null  || storageDetils.length===0 ? "":
-    <div className='cart-detail'>
-    <div className='cart-data'>
-    <img src={addcart.data.image} alt="" />
-    <p>{addcart.data.title}</p>
-    <h4> $ {addcart.data.price}</h4>
-    <div className='haldle'>
-    <button onClick={()=>{decrement(addcart)}}>-</button>
-    <h2>{addcart.count}</h2>
-    <button onClick={()=>{increment(addcart)}}>+</button>
+    <div className='cartt'>
+      {addcart === null || storageDetails.length === 0 ? (
+        ''
+      ) : (
+        <div className="cart-detail">
+          <div className="cart-data">
+            <img src={addcart.data.image} alt="" />
+            <p>{addcart.data.title}</p>
+            <h4>₹ {addcart.data.price}</h4>
+            <div className="handle">
+              <button onClick={() => decrement(addcart)}>-</button>
+              <h2>{addcart.count}</h2>
+              <button onClick={() => increment(addcart)}>+</button>
+            </div><span className='equalSign'>=</span>
+            <NavLink to="/payment">
+              <button className="buynow">Buy Now</button>
+            </NavLink>
+          </div>
+        </div>
+      )}
     </div>
-    <NavLink to="/payment">
-    <button className='buynow'>Buy Now</button>
-    </NavLink>
-    </div>
-   
-    
-   
-
-    </div>
-      }
-  
-  
-      </div>
-  )
+  );
 }
 
-export default CartCard
+export default CartCard;

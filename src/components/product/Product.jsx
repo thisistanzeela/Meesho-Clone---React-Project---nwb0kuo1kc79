@@ -8,7 +8,6 @@ function Product(props) {
   useEffect(() => {
     const apiData = async () => {
       const productdata = await Api(
-        
         "https://content.newtonschool.co/v1/pr/63b6c911af4f30335b4b3b89/products"
       );
       const result = productdata.data;
@@ -25,34 +24,13 @@ function Product(props) {
 
       }else{
         setName(result);
-      }
-
-     
+      }     
     };
     apiData();
   }, [props.searchData]);
 
-//   useEffect(()=>{
-
-//   if(props.searchData.length>0){
-//     const searchFunction=()=>{
-//       let temp = name.filter((item,index)=>{
-//         return item.title.toLowerCase().includes(props.searchData)
-//       })
-//       console.log(temp)
-//       setName([...temp])
-//     }
-//     searchFunction()
-//   }else{
-//     setName([...storeData])
-
-
-//   }
-// },[props.searchData])
-
-
   return (
-    <div>
+    <div className="">
       <ProductList productDetail={name} />
     </div>
   );
