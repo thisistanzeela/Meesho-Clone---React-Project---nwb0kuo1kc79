@@ -13,6 +13,7 @@ function CartCard(props) {
   const increment = (arg) => {
     const updatedCart = storageDetails.map((item) => {
       if (item.data.id === arg.data.id) {
+        const updatedCount = item.count + 1;
         return { ...item, count: item.count + 1 };
       }
       return item;
@@ -38,6 +39,16 @@ function CartCard(props) {
     setAddcart(updatedCart.find((item) => item.data.id === arg.data.id));
   };
 
+  const getItemPrice = () => {
+    if (addcart && addcart.count === 1) {
+      return addcart.data.price;
+    } else if (addcart && addcart.count > 1) {
+      return addcart.data.price * addcart.count;
+    }
+    return 0;
+  };
+
+
   return (
     <div className='cartt'>
       {addcart === null || storageDetails.length === 0 ? (
@@ -47,7 +58,7 @@ function CartCard(props) {
           <div className="cart-data">
             <img src={addcart.data.image} alt="" />
             <p>{addcart.data.title}</p>
-            <h4>₹ {addcart.data.price}</h4>
+            <h4>₹ {getItemPrice()}</h4>
             <div className="handle">
               <button onClick={() => decrement(addcart)}>-</button>
               <h2>{addcart.count}</h2>

@@ -1,22 +1,20 @@
-import React, { useState } from 'react'
-import '../login/Profile.css'
-import { useLocalStorage } from '../useLocalStorage';
+import React from 'react';
+import '../login/Profile.css';
 
 export default function Profile(props) {
-  const LoginCondition=()=>{
+  const loginCondition = () => {
     props.stateCallBack();
-  }
+  };
 
   return (
-    <>
-   
-    <div className='profile-bar'>
-    <h3>Hello User</h3>
-    <p>To access your Meesho account</p>
-    <button className='login' onClick={LoginCondition} >Login</button>
+    <div className="profileBar">
+      <div className="log-container">
+      <h3>Hello User</h3>
+      <p>To access your Meesho account</p>
+      <button className="SignUpBtn" onClick={loginCondition}>
+       SignUp
+      </button>
+      </div>
     </div>
-    
-    </>
-
-  )
+  );
 }

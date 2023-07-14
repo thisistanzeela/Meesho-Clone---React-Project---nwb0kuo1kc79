@@ -1,4 +1,4 @@
-/* .overlay {
+.overlay {
   position: fixed;
   width: 100%;
   height: 100vh;
@@ -21,7 +21,11 @@
   transform: translate(-50%, -50%);
 }
 
-.close {
-    background: red;
-    height: 35px;
-} */
+.closeBtn {
+    background: rgb(159, 32, 137);
+    height: 45px;
+    border: none;
+    width: auto;
+    color: #fff;
+    font-size: 16px;
+}

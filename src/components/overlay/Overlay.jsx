@@ -9,7 +9,7 @@ export default function Overlay(props) {
     <div className="overlay">
       <div className="lay-data">
         {props.children}
-        <button className="close" onClick={CloseButton}>
+        <button className="closeBtn" onClick={CloseButton}>
           Close
         </button>
       </div>

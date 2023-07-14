@@ -1,53 +1,116 @@
-.SignIn {
+.SignUp-container{
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+}
+.SignUp {
   display: grid;
   grid-template-columns: 1fr;
-  background: rgb(79, 175, 237);
-  background: linear-gradient(
-    90deg,
-    rgba(79, 175, 237, 1) 0%,
-    rgba(70, 158, 233, 1) 19%,
-    rgba(33, 85, 214, 1) 100%,
-    rgba(9, 105, 121, 1) 100%
-  );
   height: 300px;
   width: 400px;
 }
-
-.SignIn input {
-    height: 24px;
-    position: relative;
-    bottom: -2px;
-    width: 59%;
-    left: 22%;
+.logIn{
+  display: grid;
+  grid-template-columns: 1fr;
+ 
+}
+.SignUp input ,.logIn input{
+  height: 24px;
+  width: 59%;
+  margin: 10px 0px 0px 86px;
 }
 
-.SignIn button {
-  background: rgb(79, 175, 237);
-  background: linear-gradient(
-    90deg,
-    rgba(79, 175, 237, 1) 0%,
-    rgba(70, 158, 233, 1) 19%,
-    rgba(33, 85, 214, 1) 100%,
-    rgba(9, 105, 121, 1) 100%
-  );
+.SignUp button ,.logIn button{
+  width: 40%;
+  margin:30px 120px ;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  color: #f2f2f2;
+  background-color: rgb(159, 32, 137);
+}
+
+.SignUp label ,.logIn label{
+  margin-top: 20px;
   position: relative;
-    bottom: -8px;
-    width: 30%;
-    left: 34%;
-    height: 50%;
+  left: 85px;
+  top: 10px;
 }
 
-
-.SignIn label{
-  position: relative;
-  left: 87px;
-  top: 12px;
-}
-
-.wel{
-  width: 20rem;
-  background-color: #d73f59;
+.wel {
+  width: 60vw;
   text-align: center;
   margin: 0;
-  height: 6rem;
+  height: 4rem;
+ 
+}
+.wel h1{
+  color:rgb(159, 32, 137);
+  font-size: 30px;
+}
+.profileBar {
+  position: relative;
+  height: 1px;
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+.log-container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  height: 100px;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profileBar:hover .log-container {
+  display: block;
+}
+.log-container h3{
+  color: rgba(9, 8, 8, 0.667);
+  font-weight: bold;
+}
+.log-container p{
+  font-size: 12px;
+  color:  #2d2e2e;
+}
+.SignUpBtn{
+  padding:10px 50px;
+  background-color: rgb(159, 32, 137);
+  color:#fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.login-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 600px;
+  width: 400px;
+}
+.loginBtn{
+  padding:0px 50px;
+  background-color: rgb(159, 32, 137);
+  color:#fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.haveAccBtn {
+  background-color: #f2f2f2;
+  color: rgb(159, 32, 137);
+  font-size: 14px;
+  border: none;
+}
+.dontHaveAccBtn{
+  background-color: #f2f2f2;
+  color: rgb(159, 32, 137);
+  font-size: 14px;
+  padding: 14px;
+  margin-top: 30px;
+  border: none;
 }

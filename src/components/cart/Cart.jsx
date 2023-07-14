@@ -41,7 +41,7 @@ function Cart({ cartItems }) {
       {cartItems && cartItems.length > 0 ? (
         <div>
           <div className="cart-count">
-            <BsTextIndentLeft /> {cartItems.length}
+            {/* <BsTextIndentLeft /> {cartItems.length} */}
           </div>
           {cartItems.map((item, index) => (
             <CartCard key={index} cartItem={item} />

@@ -1,16 +1,17 @@
-import React, { useState } from "react";
-import "../login/Profile.css";
+import React, { useState } from 'react';
+import '../login/Profile.css';
 import { useLocalStorage } from '../useLocalStorage';
 
 export default function SignInForm(props) {
-  const [userName, setUserName] = useState("");
-  const [password, setPassword] = useState("");
-  const [email, setEmail] = useState("");
-  
+  const [userName, setUserName] = useState('');
+  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
+
+  const [loginInfo, setLoginInfo] = useLocalStorage('userInfo', []);
+  const [infoExist, setInfoExist] = useState(false);
 
   const loginFunction = (e) => {
     e.stopPropagation();
-    
   };
 
   const userInputHandler = (e) => {
@@ -25,78 +26,45 @@ export default function SignInForm(props) {
     setEmail(e.target.value);
   };
 
-  let loginInfo;
-  if (localStorage.getItem("userInfo") === null) {
-    loginInfo = [];
-  } else {
-    loginInfo = JSON.parse(localStorage.getItem("userInfo"));
-  }
-
   const submitHandler = (e) => {
     e.preventDefault();
 
-
-    if (userName !== "" && password !== "" && email !== "") {
+    if (userName !== '' && password !== '' && email !== '') {
       const storeToLocal = {
         userName,
         email,
         password,
       };
-      
-      if (
-        loginInfo.some(
-          (info) =>
-            info.userName === storeToLocal.userName ||
-            info.email === storeToLocal.email
-        )
-      ) {
+
+      if (loginInfo.some((info) => info.userName === userName || info.email === email)) {
         setInfoExist(true);
         return;
       } else {
-        loginInfo.push(storeToLocal);
-        localStorage.setItem("userInfo", JSON.stringify(loginInfo));
+        setLoginInfo([...loginInfo, storeToLocal]);
       }
     }
-    setUserName("");
-    setPassword("");
-    setEmail("");
+
+    setUserName('');
+    setPassword('');
+    setEmail('');
     props.flagSet();
   };
+
   return (
     <>
-      <form className="SignIn" onSubmit={submitHandler}>
+    <div className="SignUp-container">
+      <img src="https://images.meesho.com/images/marketing/1661417516766.webp" alt="sign up img" style={{height:"auto" , width:'400px'}} />
+      <form className="SignUp" onSubmit={submitHandler}>
         <label htmlFor="">User Name:</label>
-        <input
-          type="text"
-          placeholder="user name"
-          value={userName} name="name"
-          onChange={userInputHandler}
-        />
+        <input type="text" placeholder="Username" value={userName} name="name" onChange={userInputHandler} />
         <label htmlFor="">Email Id:</label>
-        <input
-          value={email} name="email"
-          onChange={emailInputHandler}
-          type="email"
-          placeholder="Email"
-        />
+        <input type="email" placeholder="Email" value={email} name="email" onChange={emailInputHandler} />
         <label htmlFor="">Password</label>
-        <input name="password"
-          value={password}
-          onChange={passwordInputHandler}
-          type="password"
-          placeholder="Password"
-        />
-        <button type="submit">
-          Sign Up
-        </button>
+        <input type="password" placeholder="Password" value={password} name="password" onChange={passwordInputHandler} />
+        <button type="submit">Sign Up</button>
       </form>
-      <button
-        onClick={() => {
-          props.toggleForm();
-        }}
-      >
-        Have an account already?
-      </button>
+      <button className='dontHaveAccBtn' onClick={props.toggleForm}>Have an account already?</button>
+      </div>
     </>
   );
 }

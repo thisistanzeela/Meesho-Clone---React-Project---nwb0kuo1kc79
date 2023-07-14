@@ -1,22 +1,30 @@
+.payment-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    box-shadow: 0 0 8px 0px;
+    margin:90px 0px 0px 180px;
+    width: 60vw;
+    height: 60vh;
+}
 .payment{
-    width: 42vw;
-    height: 76vh;
+    width: 52vw;
+    height: 56vh;
     display: grid;
-    box-shadow: 0 0 8px 4px;
-    position: relative;
-    left: 36rem;
-    top: 6rem;
+   
     padding: 8px;
     
     
 }
 .payment h1{
-    margin: 0;
+    align-items: center;
+    margin-left: 170px;
 }
 
 .pay-detail{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: 1fr 2fr;
     text-align: start;
     margin-top: 2px;
 }
@@ -29,20 +37,20 @@
 
 .payment-option{
     position: relative;
-    text-align: start;
-    top: 15px;
 }
-
+#paymentValue{
+    padding: 4px 220px;
+}
 .payment-option select{
     position: relative;
-    left: 90px;
+    left: 134px;
 }
 
 .card-detail{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: 1fr 2fr;
     position: relative;
-    top: 15px;
+    bottom: 22px;
     text-align: start;
     margin-bottom: 2px;
 
@@ -54,7 +62,13 @@
 }
 
 .goback{
-    width: 9rem;
+    margin: 20px;
+    padding: 6px;
+    border-radius: 4px;
+    background-color: rgb(159, 32, 137);
 
 }
-
+.goback span{
+    color: white;
+    padding: 20px;
+}

@@ -1,60 +1,28 @@
-import React, { useState } from "react";
-import "../login/Profile.css";
-import Welcome from "./Welcome";
+import React, { useState } from 'react';
+import '../login/Profile.css';
+import Welcome from './Welcome';
 import { useLocalStorage } from '../useLocalStorage';
 
 export default function Login(props) {
-  const [home ,setHome ] = useState(true);
-  const [userName, setUserName] = useState("");
-  const [password, setPassword] = useState("");
-  // const [userFlag, setUserFlag] = useState(false);
-  // const [passwordFlag, setPasswordFlag] = useState(false);
-  // const [warningMsg,setWarningMsg] = useState(false)
-  let loginInfo;
+  const [home, setHome] = useState(true);
+  const [userName, setUserName] = useState('');
+  const [password, setPassword] = useState('');
 
-  loginInfo = JSON.parse(localStorage.getItem("userInfo"));
+  const [loginInfo, setLoginInfo] = useLocalStorage('userInfo', []);
 
   const submitHandler = (e) => {
     e.preventDefault();
-    // setUserFlag(false);
-    // setPassword(false);
-    // setWarningMsg(false);
 
-    // if (userName === "") {
-    //   setUserFlag(true);
-    //   return;
-    // }
+    if (userName !== '' && password !== '') {
+      const foundUser = loginInfo.find((info) => info.userName === userName && info.password === password);
 
-    // if (password === "") {
-    //   setPasswordFlag(true);
-    //   return;
-    // }
-
-    if (userName !== "" && password !== "") {
-      const storeToLocal = {
-        userName,
-        password,
-      };
-      let data;
-      if (
-        loginInfo.some(
-          (info) =>
-          {if((info.userName === storeToLocal.userName) && (info.password === storeToLocal.password)){
-            data = info;
-            return true;
-          }}
-          
-        )
-      ) {
-        // props.stateUpLisft(data.userName);
-        props.loginStatus(data.userName)
-        setHome(!home)
+      if (foundUser) {
+        props.loginStatus(foundUser.userName);
+        setHome(false);
       } else {
-        setWarningMsg(true);
-        return
+        alert('Invalid username or password');
       }
     }
-    // props.functionCall();
   };
 
   const userInputHandler = (e) => {
@@ -65,42 +33,30 @@ export default function Login(props) {
     setPassword(e.target.value);
   };
 
-
   return (
     <div>
-   { home ? (
-    <div>
-          <form className="SignIn" onSubmit={submitHandler}>
-            <label htmlFor="">Email Id:</label>
-            <input
-              onChange={userInputHandler}
-              type="name"
-              placeholder="Name"
-            />
+      {home ? (
+        <div className='login-container'>
+          <img src="https://images.meesho.com/images/marketing/1661417516766.webp" alt="sign up img" style={{height:"auto" , width:'400px'}} />
+          <form className="logIn" onSubmit={submitHandler}>
+            <label htmlFor="">UserName:</label>
+            <input onChange={userInputHandler} type="text" placeholder="Username" />
             <label htmlFor="">Password</label>
-            <input
-              type="password"
-              onChange={passwordInputHandler}
-              placeholder="Password"
-            />
-            <button type="submit">
-              Login
-            </button>
+            <input type="password" onChange={passwordInputHandler} placeholder="Password" />
+            <button type="submit" className='loginBtn'>Login</button>
           </form>
-          <button
-            style={{ width: "100%" }}
+          <button className='haveAccBtn'
+            style={{ width: '100%' }}
             onClick={() => {
               props.toggleForm();
             }}
           >
-            don't have an account?
+            Don't have an account?
           </button>
-    
-     
+        </div>
+      ) : (
+        <Welcome />
+      )}
     </div>
-    ) : (<Welcome/>)}
-    </div>
-   
-
   );
 }

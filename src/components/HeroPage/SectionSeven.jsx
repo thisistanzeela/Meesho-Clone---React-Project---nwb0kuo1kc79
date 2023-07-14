@@ -11,7 +11,7 @@ const SectionSeven=()=>{
                   <img src={supplierImg} alt=""className="supplierImg"/>
         
                   <div className="content">
-                    <span className="title">Register as a Meesho Supplier</span>
+                    <span className="titlee">Register as a Meesho Supplier</span>
                     <p className="sub-title">
                       Sell your products to crores of customers at 0% commission
                     </p>

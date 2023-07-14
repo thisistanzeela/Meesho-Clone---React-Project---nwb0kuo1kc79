@@ -111,8 +111,9 @@ body {
     z-index: 2;
 }
 
-.profile:hover {
-    color: rgb(234, 70, 97);
+.profile{
+    font-size: 20px;
+    color: rgb(159, 32, 137);
 }
 
 .profile:hover .profile-bar {
