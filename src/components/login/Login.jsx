@@ -18,6 +18,7 @@ export default function Login(props) {
 
       if (foundUser) {
         props.loginStatus(foundUser.userName);
+
         setHome(false);
       } else {
         alert('Invalid username or password');
@@ -60,3 +61,4 @@ export default function Login(props) {
     </div>
   );
 }
+

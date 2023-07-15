@@ -3,10 +3,11 @@
     flex-direction: column;
     align-items: center;
     /* justify-content: center; */
-    box-shadow: 0 0 8px 0px;
-    margin:90px 0px 0px 180px;
+    box-shadow: 0 0 8px 0px rgb(229, 191, 223);
+    margin:7vw 0vw 0vw 18vw;
     width: 60vw;
     height: 60vh;
+    background-color: rgba(217, 155, 236, 0.074);
 }
 .payment{
     width: 52vw;
@@ -19,7 +20,7 @@
 }
 .payment h1{
     align-items: center;
-    margin-left: 170px;
+    margin-left: 17vw;
 }
 
 .pay-detail{
@@ -50,7 +51,7 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     position: relative;
-    bottom: 22px;
+    bottom: 14px;
     text-align: start;
     margin-bottom: 2px;
 

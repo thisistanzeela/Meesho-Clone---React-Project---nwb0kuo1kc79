@@ -1,65 +1,66 @@
 .product-section {
-    margin: 0px 60px 0px 140px;
-    max-width: 100vw;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
-  
-  .product-card {
-    height: 84%;
-    max-width:100%;
-    border: 1px solid #dce1e1;
-    border-radius: 6px;
-    color: #6b7070;
-    cursor: pointer;
-  }
-  
-  .product-card > img {
-    width: 78%;  
-    height: 54%;
-    margin:0px 24px 22px;
-  }
-  
-  .title {
-    font-size: 12px;
-    margin:0px 10px;
-  }
-  
-  .price-delivery-rating {
-    display: flex;
-    flex-direction: column;
-    margin:0px;
-  }
-  
-  .rate{
-    font-weight: bold;
-    font-size: 22px;
-    margin-left: 20px;
-    color: rgba(31, 31, 31, 0.888);
-  }
-  
-  .rate span:nth-child(2) {
-    font-size: 10px;
-    color: rgb(141, 149, 149);
-    margin-left: 8px;
-  }
-  .delivery span{
-    display: inline;
-    padding: 6px;
-    margin-left: 16px;
-    border-radius: 16px;
-    font-size: 12px;
-    font-weight: bold;
-    background-color: rgba(214, 226, 226, 0.21);
-  }
-  
-  .rating{
-    margin:14px 20px 40px 20px ;
+  margin: 0px 60px 0px 60px;
+  max-width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.product-card {
+  height: 84%;
+  max-width: 100%;
+  border: 1px solid #dce1e1;
+  border-radius: 6px;
+  color: #6b7070;
+  cursor: pointer;
+}
+
+.product-card > img {
+  width: 78%;
+  height: 54%;
+  margin: 0px 24px 22px;
+}
+
+.title {
+  font-size: 12px;
+  margin: 0px 10px;
+}
+
+.price-delivery-rating {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+}
+
+.rate {
+  font-weight: bold;
+  font-size: 22px;
+  margin-left: 20px;
+  color: rgba(31, 31, 31, 0.888);
+}
+
+.rate span:nth-child(2) {
+  font-size: 10px;
+  color: rgb(141, 149, 149);
+  margin-left: 8px;
+}
+.delivery span {
+  display: inline;
+  padding: 6px;
+  margin-left: 16px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: rgba(214, 226, 226, 0.21);
+}
+
+.rating {
+  margin: 14px 20px 40px 20px;
 }
 .rating p {
-    display: inline;
-    background: rgb(3, 141, 99);
-    color: rgb(255, 255, 255);
-    padding: 6px 8px;
-    border-radius: 20px ;
+  display: inline;
+  background: rgb(3, 141, 99);
+  color: rgb(255, 255, 255);
+  padding: 6px 8px;
+  border-radius: 20px;
 }
+
