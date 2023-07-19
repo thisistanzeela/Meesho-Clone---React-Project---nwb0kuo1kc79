@@ -9,6 +9,11 @@ function Detail() {
   const data = JSON.parse(localStorage.getItem("Detail"));
 
   const addToCart = () => {
+    if (!data || !data.id) {
+      // If data or data.id is undefined or null, return without doing anything
+      return;
+    }
+
     const cartData = JSON.parse(localStorage.getItem("cart")) || [];
     const existingItem = cartData.find((item) => item.data.id === data.id);
 
@@ -23,11 +28,6 @@ function Detail() {
 
     localStorage.setItem("cart", JSON.stringify(cartData));
   };
-
-  const getDeliveryText = (isEven) => {
-    return isEven ? "Delivery ₹62": "Free Delivery" ;
-  };
-
   return (
     <div>
       {data === null ? (
@@ -56,8 +56,8 @@ function Detail() {
                 <CiStar />
               </p>
               <div className="delivery-div">
-                <span>{getDeliveryText(data.id % 2 === 0)}</span>
-              </div>
+            <span>{data.id % 2 === 0 ? "Delivery ₹62" : "Free Delivery"}</span>
+          </div>
             </div>
             <div className="des">
               <h3>Description</h3>
