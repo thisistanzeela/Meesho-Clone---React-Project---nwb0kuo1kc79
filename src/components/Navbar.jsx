@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import "../styles/Navbar.css";
 import { CiUser } from "react-icons/ci";
@@ -11,9 +9,11 @@ import Profile from "./login/Profile";
 import Overlay from "./overlay/Overlay";
 import SignInForm from "./login/SignInForm";
 import Login from "./login/Login";
+import { BrowserRouter } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
-import { addToCart } from "./actions/cartAction";
+import { addToCart } from "../components/actions/cartAction";
+import Navproduct from "../components/NavProduct/Navproduct"; 
 
 function Navbar(props) {
   const [search, setSearch] = useState("");
@@ -48,10 +48,13 @@ function Navbar(props) {
     const { data } = props;
     props.addToCart(data);
   };
-
   return (
     <>
+    <div className="sticky-nav">
+
+   
       <div className="main-nav nav">
+        {/* ...existing code */}
         <div className="meesho-logo">
           <NavLink to="/">
             <img className="img-logo" src={logo} alt="logo" />
@@ -80,13 +83,14 @@ function Navbar(props) {
 
         <div className="profile">
           <div className="">
-            <CiUser className="profile-logo" />
+           
             {loginflag ? (
               <div className="profile">
                 <h2>{userdata}</h2>
               </div>
             ) : (
               <div>
+                 <CiUser className="profile-logo" />
                 <h3>Profile</h3>
                 <Profile
                   userdata={userdata}
@@ -102,11 +106,20 @@ function Navbar(props) {
           <div>
             <NavLink to="/cardcrad">
               <BsCart2 className="main-cart-logo" />
+              {props.cartItems.length > 0 && (
+                <span className="cart-count">{props.cartItems.length}</span>
+              )}
               <h3>Cart</h3>
             </NavLink>
           </div>
         </div>
       </div>
+
+      {/* Render the Navproduct component */}
+      <Navproduct />
+      </div>
+
+      {/* ...existing code */}
       {flag && (
         <Overlay OverStatus={OverStatus}>
           {currentForm ? (
@@ -120,9 +133,10 @@ function Navbar(props) {
   );
 }
 
+// ...existing code
 const mapStateToProps = (state) => {
   return {
-    cartItems: state.cart.cartItems ,
+    cartItems: state.cart.cartItems,
   };
 };
 
@@ -132,4 +146,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar); // Connect the Navbar component to the Redux store

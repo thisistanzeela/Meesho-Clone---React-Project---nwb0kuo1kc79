@@ -1,28 +1,29 @@
 .cartt{
-    margin-top: 100px;
+    margin-top: 18vh;
     display: flex;
     justify-content: center;
     align-items: center;
    }
 .cart-detail{
-    width: 50vw;
+    width: 90vw;
     height: 20vw;
     padding-left: 2rem;
-    margin-bottom: 4rem;
-    border: 1px solid grey;
+    /* margin-bottom: 4rem; */
+    border-top: 1px solid black;
+  border-bottom: 1px solid black;
+    /* border: 1px solid grey; */
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 
 }
 
 .cart-data img{
     width: 100px;
     position: relative;
-    right: -17px;
-    top: 9px;
-
-
+    right: 160px;
+    /* bottom:60px; */
+    /* top: 40px; */
 }
 
 .cart-data{
@@ -33,30 +34,35 @@
 
 .cart-data p{
     position: relative;
-    right: -4rem;
-    bottom: 1rem;
+    right: 8rem;
+    /* top: 3rem; */
     font-weight: bold;
     font-size: larger;
-    width: 14rem;
+    width: 24vw;
 }
 
 .cart-data h4{
     position: relative;
-    left: 18rem;
-    padding: 14px 40px;
+    left: 14rem;
+    padding: 12px 22px;
     text-align: center;
-    border: 1px solid rgba(114, 112, 112, 0.549);
+    background-color: rgb(3, 141, 99);
+    border-radius: 4px;
+    color: #fff;
 }
-.equalSign{
-    font-size: 30px;
+/* .equalSign{ */
+    /* font-size: 30px;
     color: black;
-    padding: 0px 10px;
-}
+    padding: 0px 4px;
+} */
 .handle{
     position: relative;
+    right: 18rem;
     width: 8rem;
-    border: 1px solid rgba(114, 112, 112, 0.549);
-    /* box-shadow: 0 0 4px 0px; */
+    height: 2.5rem;
+    border: 2px solid rgba(114, 112, 112, 0.1);
+    border-radius: 2px;
+    box-shadow: 0 0 4px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,14 +71,15 @@
 
 .buynow{
     position: relative;
-    right: 110px;
-    top: 70px;
+    left: 130px;
+    font-weight:bold;
     background-color:rgb(159, 32, 137) ;
     border-radius: 10px;
     height: 50px;
-    width: 150px;
+    width: 120px;
     box-shadow: 0 0 2px 0px;
     border: none;
+    color: white;
 }
 
 .handle button{
@@ -123,5 +130,73 @@
     padding: 8px 12px;
 }
 .no-item-msg .link{
-    color: rgb(159, 32, 137);
+    color: rgb(159, 32, 137) !important;
+}
+
+@media only screen and (max-width: 768px) {
+    .cart-detail{
+        width: 50vw;
+        height: 60vw;
+        padding-left: 2rem;
+        margin-bottom: 4rem;
+        border: 1px solid grey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .cart-data{
+        display: flex;
+        flex-direction: column;
+    }
+    
+.cart-data img{
+    width: 100px;
+    position: relative;
+    right: 26px
+   
+}
+
+
+.cart-data p{
+    position: relative;
+    right: 1px;
+    top: 10px;
+}
+
+.cart-data h4{
+    position: relative;
+    left: 5rem;
+    bottom:0px;
+    padding: 12px 30px;
+}
+.equalSign{
+    display: none;
+}
+.handle{
+    position: absolute;
+    width: 8rem;
+    height: 6vh;
+    left:200px;
+    bottom: 248px;
+    border: 1px solid rgba(114, 112, 112, 0.549);
+}
+
+.buynow{
+    position: relative;
+    left:-18px;
+    top: 0px;
+    background-color:rgb(159, 32, 137) ;
+    border-radius: 10px;
+    height: 50px;
+    width: 160px;
+    box-shadow: 0 0 2px 0px;
+    border: none;
+}
+
+
+
+
+
+
 }

@@ -112,3 +112,31 @@
     color: rgb(97, 97, 115);
     font-size: 14px;
 }
+
+@media only screen and (max-width: 768px){
+    .img-div,.list{
+        width: 100vw;
+    }
+    .titlePrice{
+        width: 30vw;
+        height: 30vh;
+    }
+    .delivery-div{
+        margin-right:220px;
+    }
+    .des{
+        width: 30vw;
+        height: 30vh;
+        font-size: 14px;
+    }
+    .des p{
+        font-size: 10px;
+    }
+    .img{
+      height: 50vh;
+    }
+    .btn{
+        display: flex;
+        flex-direction: column;
+    }
+}

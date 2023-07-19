@@ -46,14 +46,21 @@
 }
 
 .heading a{
-    color: rgb(159, 32, 137);
+    color: rgb(159, 32, 137) !important;
     display: inline;
    
 } 
 a {
-    color: rgb(82, 85, 85);
+    color: rgb(82, 85, 85) !important;
     display: block;
     padding:0px 20px;
     
     text-decoration: none;
+}
+
+@media  only screen and (max-width: 768px){
+    .all-product{
+        display:none;
+        margin-top: 0px;
+    }
 }

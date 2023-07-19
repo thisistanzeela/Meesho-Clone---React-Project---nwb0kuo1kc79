@@ -1,136 +1,173 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;700&family=Open+Sans:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;700&family=Open+Sans:wght@400;500;600;700&display=swap");
 
-div{
-    display: block;
+div {
+  display: block;
 }
-.main-footer{
-    background: rgb(248, 248, 255);
-    height: 50vh;
-    font-family: sans-serif;
-    letter-spacing: 0.5px;
-    line-height: 1.5;
-    text-align: left;
+.main-footer {
+  background: rgb(248, 248, 255);
+  height: 50vh;
+  font-family: sans-serif;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  text-align: left;
 }
-.container{
-    margin:0px 100px;
+.container {
+  margin: 0px 100px;
 }
 
-.col1{
-    min-height: auto;
-    background-color: rgb(248, 248, 255);
+.col1 {
+  min-height: auto;
+  background-color: rgb(248, 248, 255);
 }
-.col2{
-    line-height: 16px;
-    padding: 60px 0px 40px;
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
+.col2 {
+  line-height: 16px;
+  padding: 60px 0px 40px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
-.col3{
-    margin: 0px;
-    display: grid;
-    grid-template-columns: repeat(4,1fr) ;
+.col3 {
+  margin: 0px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
-.col4{
-    text-align: left;
-    flex: 0 0 100%;
-    max-width: 100%;
-    position: relative;
-    width: 100%;
-    min-height: 1px;
-    padding-right: 8px;
-    padding-left: 8px;
+.col4 {
+  text-align: left;
+  flex: 0 0 100%;
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 8px;
+  padding-left: 8px;
 }
 .col4 h4 {
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 }
-.col4-h4{
-    color: rgb(53, 53, 67);
-    font-style: normal;
-    font-weight: 500;
-    font-size: 32px;
-    line-height: 40px;
-    font-family: "Mier book";
-    margin: 0px;
-    padding: 0px;
+.col4-h4 {
+  color: rgb(53, 53, 67);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  font-family: "Mier book";
+  margin: 0px;
+  padding: 0px;
 }
 h4 {
-    display: block;
-    margin-block-start: 1.33em;
-    margin-block-end: 1.33em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
+  display: block;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
 }
 
 .col4 p {
-    width: 100%;
-    margin: 0px auto 32px;
+  width: 100%;
+  margin: 0px auto 32px;
 }
 .col4-p {
-    color: rgb(97, 97, 115);
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 24px;
-    font-family: "Mier book";
-    margin: 0px;
-    padding: 0px;
+  color: rgb(97, 97, 115);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "Mier book";
+  margin: 0px;
+  padding: 0px;
 }
 
 p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
-.col5{
-    display: flex;
-    width: 100%;
-    gap: 16px;
-    background: transparent;
-    border-radius: 8px;
+.col5 {
+  display: flex;
+  width: 100%;
+  gap: 16px;
+  background: transparent;
+  border-radius: 8px;
 }
-.col6,.col7{
-    position: relative;
-    width: 100%;
-    border-radius: 4px;
+.col6,
+.col7 {
+  position: relative;
+  width: 100%;
+  border-radius: 4px;
 }
-.col6 img,.col7 img{
-    border-radius: 4px;                        
-    height: 40px;           
-    width: 100%;
-    inset:0px;      
+.col6 img,
+.col7 img {
+  border-radius: 4px;
+  height: 40px;
+  width: 100%;
+  inset: 0px;
 }
-.col8{
-    margin-left: 70px;
+.col8 {
+  margin-left: 70px;
 }
-.col8,.col9{
-    display: flex;
-    flex-direction: column;
-}
-
-.col8 span,.col9 span{
-    color: rgb(97, 97, 115);
-    font-style: normal;
-    font-size: 16px;
-    line-height: 38px;
-    margin: 0px;
-    padding: 0px;
+.col8,
+.col9 {
+  display: flex;
+  flex-direction: column;
 }
 
-.col10 h6{
-    margin-top: 0px;
-    margin-bottom: 14px;
-    color: rgb(53, 53, 67);
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 28px;
+.col8 span,
+.col9 span {
+  color: rgb(97, 97, 115);
+  font-style: normal;
+  font-size: 16px;
+  line-height: 38px;
+  margin: 0px;
+  padding: 0px;
 }
-.col10 p{
-    font-size: 12px;
-    margin-bottom: 0px;
-    color: rgb(97, 97, 115);
+.col10 h5{
+  display: none;
+}
+.col10 h6 {
+  margin-top: 0px;
+  margin-bottom: 14px;
+  color: rgb(53, 53, 67);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+}
+.col10 p {
+  font-size: 12px;
+  margin-bottom: 0px;
+  color: rgb(97, 97, 115);
+}
+
+@media only screen and (max-width: 768px) {
+  .col4,
+  .col8,
+  .col9,
+  .lead {
+    display: none;
+  }
+  .col10 h6 {
+   display: none
+  }
+  .col10-col .h5{
+    display:contents;
+    color: #fff;
+  }
+
+  .main-footer {
+    height: 8vh;
+    background-color: rgb(97, 97, 115);
+  }
+  .col2 {
+    padding: 0px ;
+  }
+  .col1 {
+    height: 8vh;
+    background-color: rgb(97, 97, 115);
+  }
+  .col10 h5{
+    display: none;
+  }
 }

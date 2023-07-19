@@ -3,9 +3,6 @@ import "./footer.css";
 import googleStoreImg from "../utils/images/googleplayImg.jpg";
 import appleStoreImg from "../utils/images/appleStore.jpg";
 
-
-
-
 const Footer = () => {
   return (
     <div className="main-footer">
@@ -22,18 +19,10 @@ const Footer = () => {
                 </p>
                 <div className="col5">
                   <div className="col6">
-                    <img
-                      alt="Google Play store"
-                      src={googleStoreImg}
-                      
-                    />
+                    <img alt="Google Play store" src={googleStoreImg} />
                   </div>
                   <div className="col7">
-                    <img
-                      alt="App Store"
-                      src={appleStoreImg}
-                     
-                    />
+                    <img alt="App Store" src={appleStoreImg} />
                   </div>
                 </div>
               </div>
@@ -120,19 +109,21 @@ const Footer = () => {
                 </div>
               </div>
               <div className="col10">
-                
                 <div className="col10-col">
-                  <h6>Contact Us</h6>
-                    <p>
-                    Fashnear Technologies Private Limited, 
+                  <h6>Contact Us: </h6>
+                   <h5 className="h5">Contact Us:query@meesho.com</h5>
+                  <p className="lead">
+                    Fashnear Technologies Private Limited,
                     <br />
                     CIN: U74900KA2015PTC082263
                     <br />
                     06-105-B, 06-102, (138 Wu) Vaishnavi Signature, No. 78/9,
                     Outer Ring Road, Bellandur, Varthur Hobli, Bengaluru-560103,
-                    Karnataka, India 
+                    Karnataka, India
                     <br />
-                    E-mail address:<br />query@meesho.com
+                    E-mail address:
+                    <br />
+                    query@meesho.com
                   </p>
                 </div>
               </div>

@@ -47,7 +47,7 @@ function CartCard(props) {
     }
     return 0;
   };
-
+ 
 
   return (
     <div className='cartt'>
@@ -58,12 +58,13 @@ function CartCard(props) {
           <div className="cart-data">
             <img src={addcart.data.image} alt="" />
             <p>{addcart.data.title}</p>
+            <p>Free delivery</p>
             <h4>₹ {getItemPrice()}</h4>
             <div className="handle">
               <button onClick={() => decrement(addcart)}>-</button>
               <h2>{addcart.count}</h2>
               <button onClick={() => increment(addcart)}>+</button>
-            </div><span className='equalSign'>=</span>
+            </div><span className='equalSign'></span>
             <NavLink to="/payment">
               <button className="buynow">Buy Now</button>
             </NavLink>

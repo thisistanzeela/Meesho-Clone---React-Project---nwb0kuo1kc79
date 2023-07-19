@@ -15,7 +15,7 @@ function Home() {
   return (
     <>
     <Navbar SearchProduct={SearchProduct}/>
-    <Navproduct/>
+    {/* <Navproduct/> */}
     <HeroBanner />
     <Product searchData={input}/>
     <Footer />

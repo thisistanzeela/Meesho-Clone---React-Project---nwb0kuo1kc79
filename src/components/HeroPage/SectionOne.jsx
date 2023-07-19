@@ -9,7 +9,9 @@ import meeshoMakeoverImg from "../utils/images/makeover.jpg";
 const SectionOne = () => {
   return (
     <div className="sectionOne grid-container">
-      <div className="col-1">
+      
+
+        <div className="col-1">
         <div className="h1-div">
           <h1>
             <span className="underline">Low</span>est Prices
@@ -47,6 +49,8 @@ const SectionOne = () => {
           <img src={playstoreImg} alt="playstore-icon" />
           <span>Download the Meesho App</span>
         </div>
+
+     
       </div>
       <div className="col-2">
         <img

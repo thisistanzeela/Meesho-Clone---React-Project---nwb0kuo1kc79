@@ -5,9 +5,9 @@ const SectionTwo=()=>{
  return(
   
 <div className="sectionTwo topCategory">
-  <div className="line"></div>
+  <div className="line" style={{margin:"0px 0px 0px 0px"}}></div>
     <span>Top Categories to choose from</span>
-  <div className="line"></div>
+  <div className="line"style={{margin:"0px 0px 0px 0px"}}></div>
 </div>
  )
 }
