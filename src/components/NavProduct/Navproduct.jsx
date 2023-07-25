@@ -339,7 +339,7 @@ export default function Navproduct() {
           </div>
         </div>
         <div className="product-cart">
-          <span>Bags & Footwear</span>
+          <span className="hover">Bags & Footwear</span>
           <div className="product-list dropdowns">
             <div className="Top-wear odd">
               <div className="heading">

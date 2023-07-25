@@ -1,24 +1,37 @@
 
+
 import React from 'react';
-import { BsTextIndentLeft } from 'react-icons/bs';
+import { connect } from 'react-redux';
 import CartCard from './CartCard';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
 import './Cart.css';
 
 function Cart(props) {
   const { cartItems } = props;
 
+  // Group cart items by their data.id and calculate total count
+  const groupedCartItems = cartItems.reduce((acc, item) => {
+    const existingItem = acc.find((groupedItem) => groupedItem.data.id === item.data.id);
+
+    if (existingItem) {
+      existingItem.count += item.count;
+    } else {
+      acc.push(item);
+    }
+
+    return acc;
+  }, []);
+
   return (
     <div>
-      {cartItems.length > 0 ? (
-        cartItems.map((item, index) => (
+      {groupedCartItems.length > 0 ? (
+        groupedCartItems.map((item, index) => (
           <CartCard key={index} cartItem={item} />
         ))
       ) : (
         <div className="no-item-msg">
           <img src="https://www.meesho.com/mcheckout/build/static/media/empty-cart.b87f87595dfaa8606bfe.png" alt="" />
-          <p className="">Your cart is empty</p>
+          <p>Your cart is empty</p>
           <div>
             <Link to="/" className='link'>View Products</Link>
           </div>
@@ -30,8 +43,9 @@ function Cart(props) {
 
 const mapStateToProps = (state) => {
   return {
-    cartItems: state.cart.cartItems 
+    cartItems: state.cart.cartItems,
   };
 };
 
 export default connect(mapStateToProps)(Cart);
+

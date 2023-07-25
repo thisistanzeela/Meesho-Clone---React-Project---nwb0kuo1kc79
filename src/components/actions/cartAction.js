@@ -1,6 +1,7 @@
 export const ADD_TO_CART = 'ADD_TO_CART';
-export const CLEAR_CART = 'CLEAR_CART'; // New action type
+export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
 
+// Action creators
 export const addToCart = (item) => {
   return {
     type: ADD_TO_CART,
@@ -8,8 +9,9 @@ export const addToCart = (item) => {
   };
 };
 
-export const clearCart = () => {
+export const removeFromCart = (itemId) => {
   return {
-    type: CLEAR_CART,
+    type: REMOVE_FROM_CART,
+    payload: itemId,
   };
 };

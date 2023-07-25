@@ -1,33 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import "./Detail.css";
-import { CiStar } from "react-icons/ci";
+import { connect } from 'react-redux';
 import { BsCart2 } from "react-icons/bs";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
+import { CiStar } from "react-icons/ci";
+import "./Detail.css";
 
-function Detail() {
-  const data = JSON.parse(localStorage.getItem("Detail"));
+import { addToCart, removeFromCart } from '../actions/cartAction'; // Import the Redux actions
 
-  const addToCart = () => {
-    if (!data || !data.id) {
-      // If data or data.id is undefined or null, return without doing anything
+function Detail(props) {
+  const data = JSON.parse(localStorage.getItem("Detail")) || {}; // Add fallback as an empty object
+
+  const handleAddToCart = () => {
+    if (!data.id) {
       return;
     }
-
-    const cartData = JSON.parse(localStorage.getItem("cart")) || [];
-    const existingItem = cartData.find((item) => item.data.id === data.id);
-
-    if (existingItem) {
-      existingItem.count += 1;
-    } else {
-      cartData.push({
-        data,
-        count: 1,
-      });
-    }
-
-    localStorage.setItem("cart", JSON.stringify(cartData));
+    props.addToCart(data); // Dispatch the addToCart action
   };
+
   return (
     <div>
       {data === null ? (
@@ -39,7 +28,7 @@ function Detail() {
               <img src={data.image} alt={data.title} />
             </div>
             <div className="btn">
-              <button onClick={addToCart} className="addToCart-button">
+              <button onClick={handleAddToCart} className="addToCart-button">
                 <BsCart2 className="cart-logo" /> Add To Cart
               </button>
               <button className="buyNow-button">
@@ -56,14 +45,13 @@ function Detail() {
                 <CiStar />
               </p>
               <div className="delivery-div">
-            <span>{data.id % 2 === 0 ? "Delivery ₹62" : "Free Delivery"}</span>
-          </div>
+                <span>{data.id % 2 === 0 ? "Delivery ₹62" : "Free Delivery"}</span>
+              </div>
             </div>
             <div className="des">
               <h3>Description</h3>
               <p>{data.description}</p>
             </div>
-            
           </div>
         </div>
       )}
@@ -71,4 +59,13 @@ function Detail() {
   );
 }
 
-export default Detail;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addToCart: (item) => dispatch(addToCart(item)),
+    removeFromCart: (itemId) => dispatch(removeFromCart(itemId)), // Add the new action to props
+  };
+};
+
+export default connect(null, mapDispatchToProps)(Detail);
+
+

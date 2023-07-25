@@ -1,90 +1,76 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Cart.css';
+import { addToCart, removeFromCart } from '../actions/cartAction';
+import { connect } from 'react-redux';
 
 function CartCard(props) {
-  const storageDetails = JSON.parse(localStorage.getItem('cart'));
-  const [addcart, setAddcart] = useState(null);
+  const { cartItem, addToCart, removeFromCart } = props;
+  const [count, setCount] = useState(cartItem.count);
 
   useEffect(() => {
-    setAddcart(props.cartItem);
-  }, [props.cartItem]);
+    setCount(cartItem.count);
+  }, [cartItem.count]);
 
-  const increment = (arg) => {
-    if (!arg || !arg.data || !arg.data.id) {
-      // Check if 'arg' or 'arg.data' or 'arg.data.id' is not defined
-      return;
-    }
-  
-    const updatedCart = storageDetails.map((item) => {
-      if (item.data.id === arg.data.id) {
-        const updatedCount = item.count + 1;
-        return { ...item, count: updatedCount };
-      }
-      return item;
+  const increment = () => {
+    setCount((prevCount) => {
+      const newCount = prevCount + 1;
+      addToCart({ ...cartItem.data, count: newCount });
+      return newCount;
     });
-  
-    localStorage.setItem('cart', JSON.stringify(updatedCart));
-    setAddcart(updatedCart.find((item) => item.data.id === arg.data.id));
   };
 
-  const decrement = (arg) => {
-    if (!arg || !arg.data || !arg.data.id) {
-      // Check if 'arg' or 'arg.data' or 'arg.data.id' is not defined
-      return;
+  const decrement = () => {
+    if (count > 1) {
+      setCount((prevCount) => {
+        const newCount = prevCount - 1;
+        addToCart({ ...cartItem.data, count: newCount });
+        return newCount;
+      });
     }
-  
-    const updatedCart = storageDetails.map((item) => {
-      if (item.data.id === arg.data.id) {
-        const updatedCount = item.count - 1;
-        if (updatedCount === 0) {
-          return null; // Remove item from cart
-        }
-        return { ...item, count: updatedCount };
-      }
-      return item;
-    }).filter(Boolean);
-  
-    localStorage.setItem('cart', JSON.stringify(updatedCart));
-    setAddcart(updatedCart.find((item) => item.data.id === arg.data.id));
   };
 
   const getItemPrice = () => {
-    if (addcart && addcart.data && addcart.count === 1) {
-      return addcart.data.price;
-    } else if (addcart && addcart.data && addcart.count > 1) {
-      return addcart.data.price * addcart.count;
+    if (cartItem && cartItem.data) {
+      return cartItem.data.price * count;
     }
     return 0;
   };
 
+
+  if (!cartItem) {
+    return null; // Return null if cartItem is not defined
+  }
+
+
   return (
     <div className='cartt'>
-      {addcart === null || storageDetails.length === 0 ? (
-        ''
-      ) : (
-        <div className="cart-detail">
-          <div className="cart-data">
-            {addcart.data && addcart.data.image && (
-              <img src={addcart.data.image} alt="" />
-            )}
-            {addcart.data && <p>{addcart.data.title}</p>}
-            <p>Free delivery</p>
-            <h4>₹ {getItemPrice()}</h4>
-            <div className="handle">
-              <button onClick={() => decrement(addcart)}>-</button>
-              <h2>{addcart.count}</h2>
-              <button onClick={() => increment(addcart)}>+</button>
-            </div>
-            <span className='equalSign'></span>
-            <NavLink to="/payment">
-              <button className="buynow">Buy Now</button>
-            </NavLink>
-          </div>
+      <div className="cart-detail">
+        {cartItem.data.image && (
+          <img src={cartItem.data.image} alt="" />
+        )}
+        <p>{cartItem.data.title}</p>
+        <p>Free delivery</p>
+        <h4>₹ {getItemPrice()}</h4>
+        <div className="handle">
+          <button onClick={decrement}>-</button>
+          <h2>{count}</h2>
+          <button onClick={increment}>+</button>
         </div>
-      )}
+        <span className='equalSign'></span>
+        <NavLink to="/payment">
+          <button className="buynow">Buy Now</button>
+        </NavLink>
+      </div>
     </div>
   );
 }
 
-export default CartCard;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addToCart: (data) => dispatch(addToCart(data)),
+    removeFromCart: (data) => dispatch(removeFromCart(data)),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(CartCard);

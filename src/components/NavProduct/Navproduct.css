@@ -57,8 +57,7 @@ a {
     
     text-decoration: none;
 }
-
-@media  only screen and (max-width: 768px){
+@media (max-width: 767px){
     .all-product{
         display:none;
         margin-top: 0px;

@@ -14,6 +14,7 @@
 }
 .img{
     border: 1px solid rgb(176, 174, 174);
+    border-radius: 4px;
     width: 80%;
     height: 60%;
     
@@ -62,6 +63,7 @@
 
 .titlePrice{
     border: 1px solid rgb(176, 174, 174);
+    border-radius: 4px;
     width: 80%;
     padding: 20px;
 } 
@@ -102,6 +104,7 @@
 
 .des{
     border: 1px solid rgb(176, 174, 174);
+    border-radius: 4px;
     padding: 20px;
     margin: 10px 24px;
 }
@@ -113,7 +116,7 @@
     font-size: 14px;
 }
 
-@media only screen and (max-width: 768px){
+@media (max-width: 767px){
     .img-div,.list{
         width: 100vw;
     }

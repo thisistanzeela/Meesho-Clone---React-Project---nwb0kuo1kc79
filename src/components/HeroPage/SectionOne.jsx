@@ -12,6 +12,7 @@ const SectionOne = () => {
       
 
         <div className="col-1">
+
         <div className="h1-div">
           <h1>
             <span className="underline">Low</span>est Prices
@@ -52,6 +53,8 @@ const SectionOne = () => {
 
      
       </div>
+
+      
       <div className="col-2">
         <img
           className="hero-img"
