@@ -25,8 +25,12 @@
 .cart-data p{
     margin-top: 28px;
     font-weight: bold;
-    max-width: 17vw;
+    /* max-width: 17vw; */
     font-size:18px;
+    white-space:nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
 }
 .cart-data .lead{
     font-size:14px;
@@ -170,6 +174,10 @@
         font-weight: bold;
         /* max-width: 17vw; */
         font-size:12px;
+        white-space:nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100px;
     }
     
     .cart-data h4{
