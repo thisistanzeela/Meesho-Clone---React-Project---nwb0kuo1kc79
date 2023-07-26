@@ -4,13 +4,16 @@ import { Link } from "react-router-dom";
 import "./Payment.css";
 
 function Payment() {
+
+
+
   return (
     <NavLink to="/payment">
       <div
       className="">
         <div className="payment-container">
         <div className="payment">
-          <h1>Payment</h1>
+          <h1>Payment Detail:</h1>
           <div className="pay-detail">
             <label htmlFor="">First Name:</label>
             <input type="text" placeholder="First Name " required/>
@@ -20,7 +23,7 @@ function Payment() {
             <input type="email" placeholder="Email " required />
           </div>
           <div className="payment-option ">
-            <label htmlFor="">Payment Option</label>
+            <label htmlFor="">Payment Option:</label>
             <select name="payment" id="paymentValue" required>
               <option value=""></option>
               <option value="">Credit card</option>
@@ -29,7 +32,7 @@ function Payment() {
             </select>
           </div>
           <div className="card-detail">
-            <label htmlFor="">Card holder Name</label>
+            <label htmlFor="">Card holder Name:</label>
             <input type="text"  required/>
             <label htmlFor="">Expiration</label>
             <input type="date" required/>
@@ -39,7 +42,9 @@ function Payment() {
           
         </div>
         <div className="goback">
-            <Link to="/"> <button>Submit</button></Link>
+            <Link to="/"  > 
+               <button style={{color:'white'}}>Pay Now</button>
+            </Link>
         </div>
         </div>
       </div>

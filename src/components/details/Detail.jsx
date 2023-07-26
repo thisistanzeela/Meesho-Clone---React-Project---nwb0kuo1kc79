@@ -5,7 +5,7 @@ import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import { CiStar } from "react-icons/ci";
 import "./Detail.css";
 
-import { addToCart, removeFromCart } from '../actions/cartAction'; // Import the Redux actions
+import { addToCart } from '../actions/cartAction'; // Import the Redux action
 
 function Detail(props) {
   const data = JSON.parse(localStorage.getItem("Detail")) || {}; // Add fallback as an empty object
@@ -14,7 +14,8 @@ function Detail(props) {
     if (!data.id) {
       return;
     }
-    props.addToCart(data); // Dispatch the addToCart action
+    // Dispatch the addToCart action to add the item to the cart
+    props.addToCart({ ...data, count: 1 });
   };
 
   return (
@@ -61,11 +62,9 @@ function Detail(props) {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    addToCart: (item) => dispatch(addToCart(item)),
-    removeFromCart: (itemId) => dispatch(removeFromCart(itemId)), // Add the new action to props
+    addToCart: (item) => dispatch(addToCart(item)), // Add the addToCart action to props
   };
 };
 
 export default connect(null, mapDispatchToProps)(Detail);
-
 
