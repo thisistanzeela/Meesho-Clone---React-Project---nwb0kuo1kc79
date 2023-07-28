@@ -7,7 +7,7 @@ export function ProductList(props) {
   const detailFunction = (arg) => {
     localStorage.setItem("Detail", JSON.stringify(arg));
   };
-
+  
   const listOfProduct = (arr) => {
     return arr.map((item, index) => {
       const isEven = index % 2 === 0;
@@ -39,6 +39,7 @@ export function ProductList(props) {
                     {item.rating.rate}
                     <AiFillStar />
                   </p>
+                  <span style={{marginLeft:'4px', fontSize:'small'}}>{item.rating.count} reviews</span>
                 </div>
               </div>
             </div>

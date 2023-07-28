@@ -30,10 +30,7 @@ function Detail(props) {
             </div>
             <div className="btn">
               <button onClick={handleAddToCart} className="addToCart-button">
-                <BsCart2 className="cart-logo" /> Add To Cart
-              </button>
-              <button className="buyNow-button">
-                <MdKeyboardDoubleArrowRight className="arrow-logo" /> Buy Now
+                <BsCart2 className="cart-logo" style={{fontWeight:'bold'}} /> Add To Cart
               </button>
             </div>
           </div>
@@ -45,6 +42,7 @@ function Detail(props) {
                 {data.rating.rate}
                 <CiStar />
               </p>
+              <span style={{marginLeft:'4px', fontSize:'small'}}>{data.rating.count} reviews</span>
               <div className="delivery-div">
                 <span>{data.id % 2 === 0 ? "Delivery ₹62" : "Free Delivery"}</span>
               </div>

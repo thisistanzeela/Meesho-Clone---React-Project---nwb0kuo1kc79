@@ -10,6 +10,7 @@ const Footer = () => {
         <div className="col1" color="white">
           <div className="col2">
             <div className="col3">
+              
               <div className="col4">
                 <h4 className="col4-h4">Shop Non-Stop on Meesho</h4>
                 <p className="col4-p">
@@ -19,10 +20,14 @@ const Footer = () => {
                 </p>
                 <div className="col5">
                   <div className="col6">
-                    <img alt="Google Play store" src={googleStoreImg} />
+                  <a href="https://play.google.com/store/apps/details?id=com.meesho.supply&pid=pow_website&c=pow&pow_click_page_type=HP&pow_distinct_id=1897e656fd912df-0e93f2debd53c-26031d51-144000-1897e656fda143a" target="_blank" rel="noopener noreferrer">
+                <img src={googleStoreImg} alt="" />
+              </a>
                   </div>
                   <div className="col7">
-                    <img alt="App Store" src={appleStoreImg} />
+                  <a href="https://apps.apple.com/us/app/meesho/id1457958492">
+                <img src={appleStoreImg} alt="" />
+                </a>
                   </div>
                 </div>
               </div>
@@ -111,7 +116,6 @@ const Footer = () => {
               <div className="col10">
                 <div className="col10-col">
                   <h6>Contact Us: </h6>
-                   <h5 className="h5">Contact Us:query@meesho.com</h5>
                   <p className="lead">
                     Fashnear Technologies Private Limited,
                     <br />

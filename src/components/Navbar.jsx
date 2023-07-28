@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../styles/Navbar.css";
 import { CiUser } from "react-icons/ci";
 import { AiOutlineMobile } from "react-icons/ai";
-import logo from "./utils/images/meeshologo.png";
+import logo from "./utils/images/mesho.png";
 import { BsSearch } from "react-icons/bs";
 import { BsCart2 } from "react-icons/bs";
 import Profile from "./login/Profile";
@@ -71,7 +71,6 @@ function Navbar(props) {
     <>
       <div className="sticky-nav">
         <div className="main-nav nav">
-          {/* ...existing code */}
           <div className="meesho-logo">
             <NavLink to="/">
               <img className="img-logo" src={logo} alt="logo" />
@@ -89,8 +88,8 @@ function Navbar(props) {
             />
           </div>
           <div className="dwl-app">
-            <AiOutlineMobile style={{ fontSize: "1.5rem" }} />
-            <h3> Download App</h3>
+            <AiOutlineMobile style={{ fontSize: "1.5rem", }} />
+            <a href="https://play.google.com/store/apps/details?id=com.meesho.supply&pid=pow_website&c=pow&pow_click_page_type=HP&pow_distinct_id=1897e656fd912df-0e93f2debd53c-26031d51-144000-1897e656fda143a" style={{padding:'0px'}}><h3 > Download App</h3></a>
           </div>
           <div className="divider"></div>
           <div className="supplier">
@@ -174,11 +173,12 @@ function Navbar(props) {
           <div className="toggle-cart">
             <div className="toggle-main-cart-logo">
               <NavLink to="/cardcrad" className="toggle-cart-grid">
+                
+                <h3>Cart</h3>
                 <BsCart2 className="toggle-logo" />
                 {props.cartItems.length > 0 && (
                   <span className="toggle-cart-count">{props.cartItems.length}</span>
                 )}
-                <h3>Cart</h3>
               </NavLink>
             </div>
           </div>
@@ -214,3 +214,6 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
+
+
+

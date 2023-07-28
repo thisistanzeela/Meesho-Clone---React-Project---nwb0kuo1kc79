@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 84vh;
 }
 .img-div,.list{
     height: 120%;
@@ -11,6 +11,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 .img{
     border: 1px solid rgb(176, 174, 174);
@@ -36,24 +37,18 @@
     font-weight: bold;
     font-size: 16px;
     border: 1px solid rgb(159, 32, 137);
-    padding:10px 30px;
+    width: 20vw;
+    padding:6px 0px;
     border-radius: 6px ;
-    color: rgb(159, 32, 137);
-    background-color: transparent;
-}
-.buyNow-button{
-    font-weight: bold;
-    font-size: 16px;
     background-color: rgb(159, 32, 137);
+    position: absolute;
+    bottom: 166px;
+    right:72px;
     color: white;
-    border: none;
-    border-radius: 6px ;
-    padding:10px 30px
-
-
 }
+
 .cart-logo{
-    color: rgb(159, 32, 137) !important;
+    color: rgb(248, 247, 248) !important;
 }
 .arrow-logo{
     padding: 0px;
@@ -65,7 +60,7 @@
     border: 1px solid rgb(176, 174, 174);
     border-radius: 4px;
     width: 80%;
-    padding: 20px;
+    padding:34px 20px 18px 20px ;
 } 
 .title{
     color: rgb(139, 139, 163);
@@ -90,7 +85,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 16px;
-    padding: 4px 8px;
+    padding: 6px 8px;
     background: rgb(35, 187, 117);
     color: rgb(255, 255, 255);
 }
@@ -107,7 +102,7 @@
     border: 1px solid rgb(176, 174, 174);
     border-radius: 4px;
     padding: 20px;
-    margin: 10px 24px;
+    margin: 16px 24px;
 }
 .des h3{
     color: rgb(14, 14, 15)
@@ -125,6 +120,19 @@
         width: 30vw;
         height: 30vh;
     }
+    .addToCart-button{
+        font-weight: bold;
+        font-size: 16px;
+        border: 1px solid rgb(159, 32, 137);
+        width: 39vw;
+        height: 6vh;
+        border-radius: 6px ;
+        background-color: rgb(159, 32, 137);
+        position: absolute;
+        bottom: 166px;
+        right:3.5px;
+        color: white;
+    }
     .delivery-div{
         margin-right:220px;
     }
@@ -137,10 +145,14 @@
         font-size: 10px;
     }
     .img{
-      height: 50vh;
+      height: 40vh;
     }
     .btn{
         display: flex;
         flex-direction: column;
+    }
+    .addToCart-button{
+        margin-right: 30px;
+        padding:  4px 36px 4px 46px;
     }
 }

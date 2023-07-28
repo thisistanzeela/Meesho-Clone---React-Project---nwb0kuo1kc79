@@ -67,7 +67,7 @@ body {
     justify-content: center;
     align-items: center;
     color: rgb(82, 85, 85);
-    margin: 0px 20px 0px 70px;
+    margin: 0px 0px 0px 70px;
 }
 
 .profile-main {
@@ -142,6 +142,7 @@ h3{
     border-radius: 50%;
     right:18px;
     color: rgb(159, 32, 137);
+    background-color: rgba(224, 178, 233, 0.226);
     font-weight: bold;
 }
 .hamburger-menu{
@@ -218,9 +219,18 @@ h3{
     font-weight: bold;
    }
     .toggle-cart-grid{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0;
+        display: flex;
+      
+    }
+    .toggle-cart-count{
+        color: #fff;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        padding: 1px 4px;
+        margin: 18px 5px;
+        position: absolute;
+        bottom: 116px;
+        left:370px;
     }
     .toggle-logo{
         margin:18px 0px 0px 12px ;
@@ -228,5 +238,5 @@ h3{
         color:white;
     }
  
-
+   
   }

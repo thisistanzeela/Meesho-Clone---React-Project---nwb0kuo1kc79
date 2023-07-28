@@ -1,6 +1,7 @@
 import React from "react";
 import "../NavProduct/Navproduct.css";
 
+
 export default function Navproduct() {
   return (
     <div className="all-product">
@@ -15,7 +16,7 @@ export default function Navproduct() {
                 <a href="">All Women Ethnic</a>
               </div>
               <div className="">
-                <a href="">View All</a>
+                <a href="" >View All</a>
               </div>
             </div>
             <div className="Sarees even">

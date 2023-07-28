@@ -1,14 +1,21 @@
 import React from "react";
 import "./Hero.css";
+import { useNavigate } from "react-router-dom"; 
 
 import { FiCheckCircle } from "react-icons/fi";
 // import { FaRupeeSign } from "react-icons/fa";
 import supplierImg from "../utils/images/supplierImg.jpg";
 
 const SectionSeven = () => {
+  const navigate = useNavigate();
+
+  const handleViewAllClick = () => {
+    // Navigate to AllProduct component
+    navigate("/all-products");
+  };
   return (
     <div className="sectionSeven">
-      <img src={supplierImg} alt="" className="supplierImg" />
+      <img src={supplierImg} alt="" className="supplierImg" onClick={handleViewAllClick} />
 
       <div className="content">
         <span className="titlee">Register as a Meesho Supplier</span>
@@ -33,8 +40,9 @@ const SectionSeven = () => {
           <p className="text-point">Sell all over India</p>
         </div>
         <div className="jmVeNL ">
-          Sign up
-          <br /> now
+         <a href="https://supplier.meesho.com/?utm_source=meesho&utm_medium=website&utm_campaign=banner" >Sign up
+          now
+          </a>
         </div>
       </div>
     </div>
