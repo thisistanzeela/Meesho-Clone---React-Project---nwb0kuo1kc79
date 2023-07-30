@@ -14,11 +14,23 @@ export default function Profile(props) {
         <button className="SignUpBtn" onClick={loginCondition}>
           SignUp
         </button>
-        <button>Log Out</button>
+        <button >Log Out</button>
       </div>
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

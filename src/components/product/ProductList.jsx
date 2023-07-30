@@ -2,19 +2,21 @@ import React from "react";
 import "./Product.css";
 import { AiFillStar } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
-
 export function ProductList(props) {
   const detailFunction = (arg) => {
     localStorage.setItem("Detail", JSON.stringify(arg));
   };
-  
+ 
   const listOfProduct = (arr) => {
     return arr.map((item, index) => {
       const isEven = index % 2 === 0;
       const deliveryText = isEven ? "Free Delivery" : "Delivery ₹62";
 
       return (
-        <NavLink to="/detail" key={index}>
+       
+      
+<NavLink to="/detail" key={index}>
+          
           <div 
             onClick={() => {
               detailFunction(item);
@@ -42,8 +44,12 @@ export function ProductList(props) {
                   <span style={{marginLeft:'4px', fontSize:'small'}}>{item.rating.count} reviews</span>
                 </div>
               </div>
+             
             </div>
         </NavLink>
+      
+       
+
       );
     });
   };

@@ -47,8 +47,11 @@ const SectionOne = () => {
           </div>
         </div>
         <div className="downloadBtn">
+        <a href="https://play.google.com/store/apps/details?id=com.meesho.supply&pid=pow_website&c=pow&pow_click_page_type=HP&pow_distinct_id=1897e656fd912df-0e93f2debd53c-26031d51-144000-1897e656fda143a">
           <img src={playstoreImg} alt="playstore-icon" />
-          <span>Download the Meesho App</span>
+          
+          <span style={{color:'white'}}>Download the Meesho App</span>
+          </a>
         </div>
 
      

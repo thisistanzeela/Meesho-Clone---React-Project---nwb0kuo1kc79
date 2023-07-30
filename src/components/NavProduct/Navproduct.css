@@ -63,3 +63,10 @@ a {
         margin-top: 0px;
     }
 }
+ /* Tablet Styles (768px to 1023px) */
+ @media (min-width: 768px) and (max-width: 1023px){
+    .all-product{
+        display:none;
+        margin-top: 0px;
+    }
+ }

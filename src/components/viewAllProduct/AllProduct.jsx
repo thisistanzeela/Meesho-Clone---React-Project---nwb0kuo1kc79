@@ -78,7 +78,7 @@ const AllProduct = () => {
 
   return (
     <div>
-      <Navbar />
+      {/* <Navbar  className="allproduct-search"/> */}
       <div className="searchField">
         {" "}
         <input
@@ -101,7 +101,7 @@ const AllProduct = () => {
                 onChange={sortArray}
               />
               <label
-                for="low"
+                htmlFor="low"
                 style={{ paddingLeft: "0.7rem", fontSize: "14px" }}
               >
                 <strong>Low to High</strong>
@@ -117,7 +117,7 @@ const AllProduct = () => {
                 onChange={sortArray}
               />
               <label
-                for="high"
+                htmlFor="high"
                 style={{ paddingLeft: "0.7rem", fontSize: "14px" }}
               >
                 <strong>High to Low</strong>
@@ -140,7 +140,7 @@ const AllProduct = () => {
                   name="men's clothing"
                   onChange={handleCategoryFilter}
                 />
-                <label for="men's clothing" style={{ paddingLeft: "0.5rem" ,fontSize: "14px",}}>
+                <label htmlFor="men's clothing" style={{ paddingLeft: "0.5rem", fontSize: "14px", }}>
                   <strong>Men</strong>
                 </label>
               </div>
@@ -157,7 +157,7 @@ const AllProduct = () => {
                   name="women's clothing"
                   onChange={handleCategoryFilter}
                 />
-                <label for="women's clothing" style={{ paddingLeft: "0.5rem",fontSize: "14px" }}>
+                <label htmlFor="women's clothing" style={{ paddingLeft: "0.5rem", fontSize: "14px" }}>
                   <strong>Women</strong>
                 </label>
               </div>
@@ -174,7 +174,7 @@ const AllProduct = () => {
                   name="electronics"
                   onChange={handleCategoryFilter}
                 />
-                <label for="electronics" style={{ paddingLeft: "0.5rem" ,fontSize: "14px"}}>
+                <label htmlFor="electronics" style={{ paddingLeft: "0.5rem", fontSize: "14px" }}>
                   <strong>Electronics</strong>
                 </label>
               </div>
@@ -191,7 +191,7 @@ const AllProduct = () => {
                   name="jewelery"
                   onChange={handleCategoryFilter}
                 />
-                <label for="jewelery" style={{ paddingLeft: "0.5rem" ,fontSize: "14px"}}>
+                <label htmlFor="jewelery" style={{ paddingLeft: "0.5rem", fontSize: "14px" }}>
                   <strong>Jewellery</strong>
                 </label>
               </div>
@@ -201,8 +201,9 @@ const AllProduct = () => {
         <div className="productsList">
           {filteredData.map((e) => (
             <ProductList
-            productDetail={filteredData}
-            //    index = {index}
+              productDetail={filteredData}
+              //    index = {index}
+              key={e.id}
               id={e.id}
               title={e.title}
               description={e.description}

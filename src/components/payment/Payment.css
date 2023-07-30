@@ -75,25 +75,25 @@ label{
 
 @media (max-width: 767px){
     .payment-container{
-        margin:7vw 0vw 0vw 8vw;
-        width: 80vw;
-        height: 76vh;
+        margin:7vw 0vw 0vw 0vw;
+        width: 92vw;
+        height: 82vh;
         font-size: 5rem;
     }
     .payment{
-        width: 70vw;
-        height: 96vh;
+        width: 89vw;
+        height: 100vh;
     }
     .payment h1{
-        margin-left: 6rem;
+        margin-left: 3rem;
     }
     .payment label{
-        font-size: 18px;
+        font-size: 16px;
         margin-top: 10px;
     }  
     .pay-detail input{
-        width: 44vw;
-        height: 5vh;
+        width: 56vw;
+        height: 4vh;
         margin: 6px 0px 0px 0px;
     } 
     .payment-option{
@@ -102,6 +102,41 @@ label{
 .payment-option select{
     display: none;
 }
+.card-detail input{
+    margin:8px 11px 0px 0px;
+}
+}
+
+/* Tablet Styles (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px){
+    .payment-container{
+        margin:7vw 0vw 0vw 0vw;
+        width: 96vw;
+        height: 72vh;
+        font-size: 5rem;
+    }
+    .payment{
+        width: 90vw;
+        height: 100vh;
+    }
+    .payment h1{
+        margin-left: 18rem;
+    }
+    .payment label{
+        font-size: 16px;
+        margin-top: 10px;
+    }  
+    .pay-detail input{
+        width: 58vw;
+        height: 4vh;
+        margin: 6px 0px 0px 0px;
+    } 
+    .payment-option{
+        display: none;
+    }
+/* .payment-option select{
+    display: none;
+} */
 .card-detail input{
     margin:8px 11px 0px 0px;
 }

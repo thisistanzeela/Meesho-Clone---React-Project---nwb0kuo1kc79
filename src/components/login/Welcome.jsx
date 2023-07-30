@@ -11,4 +11,3 @@ function Welcome({ userName }) {
 
 export default Welcome;
 
-

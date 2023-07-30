@@ -7,6 +7,8 @@ import Navbar from "./Navbar";
 import Cart from "./cart/Cart";
 import Payment from "./payment/Payment";
 import AllProduct from '../components/viewAllProduct/AllProduct';
+
+
 const App = () => {
   return (
     <div>

@@ -133,10 +133,10 @@ function Payment(props) {
               <div className="payment">
                 <h1>Payment Detail:</h1>
                 <div className="pay-detail">
-                  <label htmlFor="">First Name:</label>
+                  <label htmlFor="">Name:</label>
                   <input type="text" placeholder="First Name " required />
-                  <label htmlFor="">Last Name:</label>
-                  <input type="text" placeholder="Last Name " required />
+                  <label htmlFor="">Address:</label>
+                  <input type="text" placeholder="Addres" required />
                   <label htmlFor="">Email:</label>
                   <input type="email" placeholder="Email " required />
                 </div>

@@ -52,6 +52,7 @@ function CartCard(props) {
   };
 
   return (
+    <>
     <div className='cartt'>
       <div className='cart-data'>
         {cartItem.data.image && <img src={cartItem.data.image} alt='' />}
@@ -65,18 +66,16 @@ function CartCard(props) {
             <button onClick={increment}>+</button>
           </div>
           <span className='equalSign'></span>
-          <button onClick={handleRemoveFromCart} className='buynow'>
+          <button onClick={handleRemoveFromCart} className='remove-btn'>
             X Remove
           </button>
         </div>
-        <div className='cart-payment'>
-          <span>Clicking on ‘Continue’ will not deduct any money!</span>
-          <Link to='/payment' className='continue'>
-            Continue
-          </Link>
-        </div>
+     
       </div>
+     
     </div>
+  
+    </>
   );
 }
 

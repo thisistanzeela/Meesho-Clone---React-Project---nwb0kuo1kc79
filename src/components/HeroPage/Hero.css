@@ -67,22 +67,22 @@ h1 span{
     margin: 10px;
 }
 .downloadBtn{
-    padding: 12px 32px;
+    padding: 6px 0px 12px 0px;
     background-color: rgb(159, 32, 137);
-    display: inline;
     margin-left:  40px;
-    border-radius: 4px;
-    color: #fbf3f3;
-    /* font-weight: bold; */
+    margin-right:  180px;
+    border-radius: 6px;
+    /* color: #fbf3f3; */
+    font-weight: bold;
     font-size: 18px;
 }
 .downloadBtn img{
     position: relative;
-    top: 8px;
-    margin-right: 20px;
+    top: 7px;
+    margin-right: 16px;
 }
 
-/* next section */
+/* next section 2*/
 
 .topCategory{
     display: flex;
@@ -105,7 +105,7 @@ h1 span{
     background: rgb(217, 166, 208);
 }
 
-/* next section */
+/* next section 3*/
 .sectionThree,.sectionFour,.sectionFive,.sectionSix{
     height: 80vh;
     max-width: 100vw;
@@ -146,7 +146,7 @@ h1 span{
     top: 220px;
 }
 
-/* next section */
+/* next section 4*/
 .backgroundImg2{
     background-image: url("https://images.meesho.com/images/marketing/1678691743015_1200.webp");
     background-repeat: no-repeat;
@@ -205,7 +205,7 @@ h1 span{
     width: 190px;
     height: 60px;
 }
-/* next section-4 */
+/* next section-5*/
 .backgroungImg3{
     background-image: url("https://images.meesho.com/images/marketing/1678691892265_1200.webp");
     background-repeat: no-repeat;
@@ -360,47 +360,185 @@ h1 span{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin:0;
-    height: 70vh;
+    text-align: center;
+    margin:30px 0px 0px 0px;
+   
     }
     .col-1{
-        margin: 0px;
+        background-color:rgba(244, 226, 244, 0.599);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    
-    .col-2{
-        display: none;
-    }
    
     .downloadBtn{
-        margin: 10px 200px 50px  190px;
-        padding: 3px 8px 10px 14px;
+        margin: 10px 16px 50px  0px;
+        padding: 3px 2px 10px 10px;
     }
    
-    .sectionThree,.sectionFour,.sectionFive,.sectionSix,.sectionSeven{
+    .col-2,.sectionThree,.sectionFour,.sectionFive,.sectionSix,.sectionSeven{
         display: none;
     }
     .topCategory{
         display: flex;
         align-items: center;
         justify-content: center;
+        text-align: center;
         margin-top: 50px;
     }
     .topCategory span{
         color: rgb(53, 53, 67);
-        /* font-weight: 700; */
         font-size: 26px;
-        line-height: 44px;
-        text-align: center;
-        /* width: 40vw; */
-        padding: 0px 36px 0px 14px;
+        width: 30vw;
+        padding: 0px 6px 0px 14px;
     }
     .line{
-        width: 14%;
+        width: 30%;
         height: 1px;
         background: rgb(217, 166, 208);
     }
 }
+
+/* Tablet Styles (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .sectionThree,.sectionSix,.sectionSeven{
+        display: none;
+    }
+    .grid-container{
+        display: grid;
+        margin-top: 60px;
+        grid-template-columns: 1fr 1fr;
+        margin-left: 0%;
+    }
+    
+    .col-1{
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+        background-color: rgba(228, 228, 245, 0.571);
+    }
+    h1{
+        font-size: 30px;
+        color: rgb(0, 0, 0);
+    }
+    
+    .underline::after{
+        width: 80%;
+    }
+    .hero-img{
+        width: 100%;
+        height: 100%;
+    }
+    .flex{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color:rgb(255, 255, 255) ;
+        margin: 30px 60px 30px 40px ;
+        padding: 0px 0px 0px 20px;
+    }
+    
+    .flex span{
+        color: rgb(95, 95, 105);
+        font-weight: bold;
+        font-size: 14px;
+        padding-top: 10px;
+        display: inline-block;
+        margin-right: 24px;
+    }
+    
+    .divide{
+        background-color: rgba(28, 30, 28, 0.823);
+        height: 70px;
+        width: 1px;
+        margin: 0px 20px 0px 0px ;
+    }
+    .downloadBtn{
+        padding: 4px 0px 10px 0px;
+        margin:0px 62px 30px 40px;
+        border-radius: 6px;
+        font-size: 16px;
+    }
+    .downloadBtn img{
+        position: relative;
+        top: 6px;
+        margin-right: 20px;
+    }
+    .topCategory span{
+        color: rgb(53, 53, 67);
+        font-size: 28px;
+        width: 30vw;
+        padding: 0px 6px 0px 14px;
+    }
+    .line{
+        width: 30%;
+        height: 1px;
+        background: rgb(217, 166, 208);
+    }
+    .backgroundImg2{
+        background-image: url("https://images.meesho.com/images/marketing/1678691743015_1200.webp");
+        background-repeat: no-repeat;
+        background-position:inherit;
+        width: 94vw;  
+        height: 80vh;
+        margin-top: 42px; 
+        margin-left: 24px; 
+        border-radius: 4px;
+    }
+    .col1 img{
+        position: absolute;
+        left: 60px;
+        top: 148px;
+        width: 160px;
+    }
+    
+    .col2 img{
+        position: absolute;
+        left: 378px;
+        height: 320px;
+        width: 168px;
+    }
+    .col2 img:nth-child(2){
+        position: absolute;
+        left: 388px;
+        top: 432px;
+        width: 154px;
+    }
+    .col3 img{
+        position: absolute;
+        left: 568px;
+        height: 320px;
+        width: 168px;
+    }
+    .col3 img:nth-child(2){
+        position: absolute;
+        left: 580px;
+        top: 328px;
+        width: 146px;
+    }
+    .col4 img{
+        position: absolute;
+        left: 736px;
+        top: 10px;
+        width: 168px;
+        height: 320px;
+    }
+    .col4 img:nth-child(2){
+        position: absolute;
+        left: 738px;
+        top: 328px;
+        width: 166px;
+        height: 60px;
+    }
+    .backgroungImg3{
+        background-image: url("https://images.meesho.com/images/marketing/1678691892265_1200.webp");
+        background-repeat: no-repeat;
+        background-position:inherit;
+        width: 94vw;  
+        height: 80vh;
+        margin-top: 42px; 
+        margin-left: 24px; 
+        border-radius: 4px;
+    }
+  }

@@ -5,7 +5,6 @@
 }
 
 .filters{
-    /* background-color: aqua; */
     border: 1px solid rgb(194, 194, 194);
     width: 10%;
     padding: 2rem;
@@ -36,4 +35,15 @@
    font-size: 20px;
    border: 1px solid grey;
    border-radius: 10px;
+}
+
+/* Tablet Styles (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px){
+    .filters{
+        width: 16%;
+    }
+    
+    .productsList{
+        width: 50%;
+    }
 }

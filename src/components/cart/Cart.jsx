@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import CartCard from './CartCard';
+import ContinueButton from './ContinueButton'; // Import the ContinueButton component
 import { Link } from 'react-router-dom';
 import './Cart.css';
 
@@ -37,9 +38,20 @@ function Cart(props) {
   return (
     <div>
       {groupedCartItems.length > 0 ? (
-        groupedCartItems.map((item, index) => (
-          <CartCard key={index} cartItem={item} />
-        ))
+        <>
+        <div className="grid-cart-box">
+          <div className="cart-container" >
+              {groupedCartItems.map((item, index) => (
+                <CartCard key={index} cartItem={item} />
+              ))}
+              
+            </div>
+           <div className='hr'></div>
+          <ContinueButton />{/* Rendering the ContinueButton outside the CartCard component */}
+        </div>
+         
+           
+        </>
       ) : (
         <div className="no-item-msg">
           <img src="https://www.meesho.com/mcheckout/build/static/media/empty-cart.b87f87595dfaa8606bfe.png" alt="" />

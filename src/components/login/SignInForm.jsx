@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../login/Profile.css';
-
+import firebase from 'firebase/app';
 export default function SignInForm(props) {
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
@@ -82,22 +82,6 @@ export default function SignInForm(props) {
     </>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

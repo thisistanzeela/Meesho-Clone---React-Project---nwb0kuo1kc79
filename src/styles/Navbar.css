@@ -5,21 +5,17 @@ body {
 
 
 .main-nav {
-    /* margin-top: 10px; */
     width: 100%;
     height: 58px;
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
   }
 .sticky-nav{
     padding-top: 8px;
     position: sticky;
     top: 0;
     z-index: 1000;
-    /* height: 10vh; */
     background-color: #fff;
 }
 .img-logo {
@@ -69,13 +65,27 @@ body {
     color: rgb(82, 85, 85);
     margin: 0px 0px 0px 70px;
 }
+.dwl-app:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(159, 32, 137);
+    margin: 0px 0px 0px 70px;
+
+}
+.dwl-app h3:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(159, 32, 137);
+    font-weight: bold;
+    /* margin: 0px 0px 0px 70px; */
+}
 
 .profile-main {
     position: relative;
     margin: 18px;
     color: rgb(82, 85, 85);
-    /* font-weight: lighter; */
-    /* background-color: pink; */
 }
 .profile-main .hover:hover{
     color: rgb(159, 32, 137) !important;
@@ -106,11 +116,13 @@ body {
     margin: 0;
     /* position: relative; */
 }
+
 .main-cart-logo{
     color: rgba(53, 53, 67, 0.692);;
     font-size: 20px;
     margin-left: 4px;
 }
+
 .profile-bar {
     position: fixed;
     display: none;
@@ -153,6 +165,7 @@ h3{
     .main-nav.nav {
       /* flex-direction: column; */
       justify-content: space-between;
+      /* margin-left: 30px; */
     }
   
     .hamburger-menu {
@@ -229,14 +242,35 @@ h3{
         padding: 1px 4px;
         margin: 18px 5px;
         position: absolute;
-        bottom: 116px;
-        left:370px;
+        bottom: 114px;
+        left:278px;
     }
     .toggle-logo{
         margin:18px 0px 0px 12px ;
         font-size: 22px;
         color:white;
     }
- 
+    
    
   }
+  /* Tablet Styles (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px){
+    .supplier,.dwl-app,.divider{
+        display: none;
+    }
+    
+      .main-nav {
+        
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .search {
+        position: relative;
+        width: 400px;
+        height: 44px;
+        border: 1px solid #867c7c;
+        margin-left: 0rem;
+        margin-right: 180px;
+        border-radius: 4px;
+    }
+    }
