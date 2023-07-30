@@ -75,17 +75,23 @@
     display: grid;
     grid-template-columns: 1fr ;
     margin-top: 60px;
-    max-width: 70vw;
+    width: 100vw;
   }
   .product-card {
     margin-bottom: 3rem;
-    margin-left: 2rem;
+    margin-left: rem;
     height: 24rem;
-    max-width: 16rem;
+    width: 18rem;
     border: 1px solid #dce1e1;
     border-radius: 6px;
     color: #6b7070;
     cursor: pointer;
+  }
+  .product-card-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1.5rem;
   }
   .product-card > img {
     width: 58%;

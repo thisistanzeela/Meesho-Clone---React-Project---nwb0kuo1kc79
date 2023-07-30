@@ -30,7 +30,7 @@ function Product(props) {
   }, [props.searchData]);
 
   return (
-    <div className="">
+    <div className="product-card-center" >
       <ProductList productDetail={name} />
     </div>
   );

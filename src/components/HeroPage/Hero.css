@@ -370,6 +370,7 @@ h1 span{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 100vw;
     }
    
     .downloadBtn{
@@ -501,7 +502,7 @@ h1 span{
     }
     .col2 img:nth-child(2){
         position: absolute;
-        left: 388px;
+        left: 38px;
         top: 432px;
         width: 154px;
     }

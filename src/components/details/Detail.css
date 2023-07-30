@@ -2,48 +2,47 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 84vh;
+    height: 74vh;
+    width: 70vw;
+    margin-left: 14rem;
+    margin-top: 2rem;
+    box-shadow:0px 0px 2px 1px rgba(112, 112, 134, 0.245);
+
 }
 .img-div,.list{
-    height: 120%;
-    width: 30%;
+    height: 130%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
 }
-.img{
-    border: 1px solid rgb(176, 174, 174);
-    border-radius: 4px;
-    width: 80%;
-    height: 60%;
-    
-}
+
 .img img{
-    width: 70%;
-    height:90%;
-    margin-left: 50px;
+    width: 80%;
+    height:52%;
+    margin-top:6rem;
 }
 
 .btn{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-    padding:10px 30px;
+    /* padding:10px 0px; */
 }
 
 .addToCart-button{
     font-weight: bold;
     font-size: 16px;
     border: 1px solid rgb(159, 32, 137);
-    width: 20vw;
+    width: 24vw;
     padding:6px 0px;
     border-radius: 6px ;
     background-color: rgb(159, 32, 137);
     position: absolute;
     bottom: 166px;
-    right:72px;
+    right:122px;
     color: white;
 }
 
@@ -55,29 +54,12 @@
     margin-top: 6px;
     font-size: 18px !important;
 }
-
-.titlePrice{
-    border: 1px solid rgb(176, 174, 174);
-    border-radius: 4px;
-    width: 80%;
-    padding:34px 20px 18px 20px ;
-} 
-#title{
-    color: rgb(139, 139, 163);
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 24px;
-    margin: 0px;
-    padding: 0px;
-    
-}
 .price{
     color: rgb(53, 53, 67);
     font-style: normal;
     font-weight: 500;
-    font-size: 32px;
-    margin: 0px;
+    font-size: 24px;
+    margin:14px 4px;
     padding: 0px;
 }
 .list .titlePrice .ratingg{
@@ -85,61 +67,78 @@
     justify-content: center;
     align-items: center;
     border-radius: 16px;
-    padding: 6px 8px;
+    padding: 8px 12px;
     background: rgb(35, 187, 117);
     color: rgb(255, 255, 255);
+}
+
+.titlePrice{
+    border: none;
+    padding:0px 60px 18px 6px ;
+} 
+#title{
+    color: rgb(139, 139, 163);
+    font-style: normal;
+    font-weight:600;
+    font-size: 18px;
+    margin: 0px;
+    padding: 0px;
+    
 }
 .delivery-div{
     color: rgb(97, 97, 115);
     font-style: normal;
-    font-size: 12px;
+    font-size: 14px;
     text-align: center;
-    margin-right: 280px;
+    margin-right: 350px;
     padding: 0px;
 } 
 
 .des{
-    border: 1px solid rgb(176, 174, 174);
-    border-radius: 4px;
-    padding: 20px;
-    margin: 16px 24px;
+    border: none;
+    padding: 0px;
+    margin:30px 12px 12px 16px;
 }
 .des h3{
-    color: rgb(14, 14, 15)
+    color: rgba(11, 11, 13, 0.625);
+    font-weight:600;
 }
 .des p{
     color: rgb(97, 97, 115);
-    font-size: 14px;
+    font-size: 16px;
 }
 
 @media (max-width: 767px){
     .detail{
         display: grid;
-        grid-template-columns:1fr 1fr;
-        width: 90vw;
+        grid-template-columns:50vw 50vw;
+        width: 94vw;
         height: 70vh;
-        margin: 30px;
+        margin:70px 10px;
         border: 1px solid rgb(176, 174, 174);
         border-radius:6px;
         box-shadow:0px 0px 2px 1px rgba(112, 112, 134, 0.245);
     }
     .img-div{
-        margin-right: 0px;
-        width: 60vw;
-        height: 66vh;
+        margin-left: 0px;
+        margin-bottom: 3rem;
+        width: 50vw;
+        height: 70vh;
         border-right: 1px solid rgba(176, 174, 174, 0.478);
+
     }
     .img {
-        width: 70%;
-        /* height:50%; */
+        width: 40vw;
+        height:70vh;
         margin-left: 48px;
-        border: none
+        margin-bottom: 78px;
+        border: none;
     }
     
     .btn{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 10px;
+        /* gap: 10px; */
         padding:0px 0px;
     }
     
@@ -147,13 +146,13 @@
         font-weight: bold;
         font-size: 16px;
         /* border: 1px solid rgb(159, 32, 137); */
-        width: 38vw;
+        width: 36vw;
         padding:6px 0px;
         border-radius: 6px ;
         background-color: rgb(159, 32, 137);
         position: absolute;
-        bottom: 56px;
-        right:10px;
+        bottom: 100px;
+        right:28px;
         color: white;
     }
     .price{
@@ -161,7 +160,7 @@
         font-style: normal;
         font-weight: 500;
         font-size: 24px;
-        margin: 4px;
+        /* margin: 4px; */
         padding: 0px;
     }
     .list{
@@ -198,7 +197,7 @@
     .des{
         border: none;
         padding: 0px;
-        margin:30px 12px 12px 10px;
+        margin:30px 20px 12px 10px;
     }
     .des h3{
         color: rgba(11, 11, 13, 0.625);

@@ -163,9 +163,8 @@ h3{
 /* Small screens (up to 767px) */
 @media (max-width: 767px) {
     .main-nav.nav {
-      /* flex-direction: column; */
+      margin: 0;
       justify-content: space-between;
-      /* margin-left: 30px; */
     }
   
     .hamburger-menu {
