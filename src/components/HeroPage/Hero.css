@@ -354,7 +354,7 @@ h1 span{
     position: absolute;
 }
 
-
+/* Mobile devices (up to 767px) */
 @media (max-width: 767px){
     .grid-container{
     display: flex;
@@ -374,7 +374,7 @@ h1 span{
     }
    
     .downloadBtn{
-        margin: 10px 16px 50px  0px;
+        margin: 10px 16px 50px  6px;
         padding: 3px 2px 10px 10px;
     }
    

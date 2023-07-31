@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import '../login/Profile.css';
-import Welcome from './Welcome';
 import Profile from './Profile';
-// import { useLocalStorage } from '../useLocalStorage';
+import { useLocalStorage } from '../useLocalStorage';
 
 export default function Login(props) {
   const [home, setHome] = useState(true);
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
   const [usersData, setUsersData] = useState(null);
-  // const [loginInfo, setLoginAInfo] = useLocalStorage('userInfo', []);
+  const [loginInfo, setLoginAInfo] = useLocalStorage('userInfo', []);
 
   useEffect(() => {
     const apicalluser = async () => {
@@ -38,9 +37,10 @@ export default function Login(props) {
         if (verify) {
           alert("Login successful");
           // Update the state to switch to the welcome screen
+          setLoginAInfo(matchedUser.userName);
           setHome(true);
         } else {
-         alert("Invalid password");
+          alert("Invalid password");
         }
       }
     } else {
@@ -84,19 +84,10 @@ export default function Login(props) {
           </button>
         </div>
       ) : (
-        <Welcome userName={userName} onLogout={logoutHandler} />
+        // <Welcome userName={userName} onLogout={logoutHandler} />
+        <Profile userName={userName} stateCallBack={() => setHome(true)} />
       )}
+     
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
-
-

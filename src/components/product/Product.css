@@ -70,6 +70,7 @@
   border-radius: 20px;
 }
 
+/* Mobile devices (up to 767px) */
 @media (max-width: 767px) {
   .product-section {
     display: grid;
@@ -79,7 +80,7 @@
   }
   .product-card {
     margin-bottom: 3rem;
-    margin-left: rem;
+    /* margin-left: rem; */
     height: 24rem;
     width: 18rem;
     border: 1px solid #dce1e1;
@@ -91,7 +92,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 1.5rem;
+    margin-left: 1rem;
   }
   .product-card > img {
     width: 58%;

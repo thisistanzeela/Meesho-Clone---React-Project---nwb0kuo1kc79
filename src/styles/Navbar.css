@@ -84,13 +84,10 @@ body {
 
 .profile-main {
     position: relative;
-    margin: 18px;
+    margin: 32px;
     color: rgb(82, 85, 85);
 }
-.profile-main .hover:hover{
-    color: rgb(159, 32, 137) !important;
-    font-weight: bold !important;
-}
+
 .profile-logo{
     margin-left: 16px;
     margin-top: 62px;
@@ -123,11 +120,11 @@ body {
     margin-left: 4px;
 }
 
-.profile-bar {
+/* .profile-bar {
     position: fixed;
     display: none;
     z-index: 2;
-}
+} */
 
 .divider{
     background-color: rgb(200, 205, 199);
@@ -242,7 +239,7 @@ h3{
         margin: 18px 5px;
         position: absolute;
         bottom: 114px;
-        left:278px;
+        left:268px;
     }
     .toggle-logo{
         margin:18px 0px 0px 12px ;

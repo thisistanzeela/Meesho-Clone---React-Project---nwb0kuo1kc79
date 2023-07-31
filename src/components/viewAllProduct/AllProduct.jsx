@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "../Navbar";
+// import Navbar from "../Navbar";
 import Api from "../utils/api/api";
 import { ProductList } from "../product/ProductList"; // Updated import statement
 import "./allProduct.css";

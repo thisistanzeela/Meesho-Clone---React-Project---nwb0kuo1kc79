@@ -52,6 +52,7 @@
     left: 7rem;
     border:none;
 background-color:transparent;
+color: rgb(157, 6, 6);
 }
 .handle{
     position: absolute;
@@ -160,14 +161,15 @@ left: 57rem;
     color: rgb(159, 32, 137) !important;
 }
 
+/* Mobile devices (up to 767px) */
 @media (max-width: 767px) {
     .cartt{
         margin-top:1rem;
         margin-left:2rem;
        }
     .cart-data{
-        width: 86vw;
-        height: 60vw;
+        width: 87vw;
+        height: 66vw;
         padding-left: 0rem;
         border: 1px solid rgba(206, 206, 222, 0.474);
         border-radius: 6px ;
@@ -177,8 +179,8 @@ left: 57rem;
     
     .cart-data img{
         width: 22vw;
-        height: 28vh;
-        margin-top: 2rem;
+        height: 24vh;
+        margin-top: 3rem;
         margin-left: 2rem;
     }
     
