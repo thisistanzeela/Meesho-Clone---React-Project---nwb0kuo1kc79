@@ -23,8 +23,11 @@ Local Storage: Local storage is utilized to store certain data locally in the us
 To run the Meesho Clone locally, follow these steps:
 
 git clone <repository-url>
+
 cd meesho-clone
+
 npm install
+
 npm start
 
 ## hosted link
