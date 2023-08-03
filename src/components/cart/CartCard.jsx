@@ -22,7 +22,7 @@ function CartCard(props) {
       }
     }
   };
-
+  //This func calculates the total price of the item based on its quantity.
   const getItemPrice = () => {
     if (cartItem && cartItem.data) {
       return cartItem.data.price * count;

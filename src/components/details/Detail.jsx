@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from 'react-redux';
 import { BsCart2 } from "react-icons/bs";
-import { MdKeyboardDoubleArrowRight } from "react-icons/md";
+// import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import { CiStar } from "react-icons/ci";
 import "./Detail.css";
 
