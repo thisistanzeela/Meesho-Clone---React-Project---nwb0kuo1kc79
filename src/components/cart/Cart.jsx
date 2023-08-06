@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import CartCard from './CartCard';
-import ContinueButton from './ContinueButton'; // Import the ContinueButton component
+import ContinueButton from './ContinueButton'; 
 import { Link } from 'react-router-dom';
 import './Cart.css';
 
