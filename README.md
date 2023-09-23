@@ -2,6 +2,9 @@
 
 This project is a clone of Meesho, a platform where users can browse and purchase various products. The application is built using React, Redux, Firebase, and local storage to provide users with the ability to sign up, log in, search for items, manage their cart, and place orders.
 
+## Project Link
+[Visit the hosted website](https://meesho-clone-g08s.onrender.com/)
+
 ## Features
 
 **User Authentication:** Users can sign up and log in to the application. User data is securely stored using Firebase authentication, ensuring a safe and seamless login experience.
@@ -42,5 +45,4 @@ To run the Meesho Clone locally, follow these steps:
    ```bash
    npm start
 
-## Project Link
-[Visit the hosted website](https://meesho-clone-g08s.onrender.com/)
+
